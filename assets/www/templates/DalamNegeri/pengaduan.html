@@ -1,0 +1,38 @@
+<ion-view view-title="KRITIK & SARAN">
+  <!-- Header -->
+  <div class="bar bar-header" style="background-color: #008aeb">
+    <button class="button button-icon icon ion-navicon" style="color:azure" menu-toggle="left"></button>
+    <div class="h1 title" style="color:azure">KRITIK & SARAN</div>
+  </div>
+  <!-- End Header -->
+
+  <ion-content scroll="true" style="padding-top:10px;">
+    <div class="bg-head">
+      <div style="padding-top:60px;text-align: center;font-size: 18px !important;color: white !important;padding-left:10px;padding-right:10px;line-height:7mm">
+        Masukkan Anda Kami Butuhkan
+        <br> Guna Meningkatkan Pelayanan Kami
+      </div>
+      <div class="form-pengaduan">
+        <div class="card list" style="margin: 6px !important;margin-top: 20px !important">
+          <label class="item item-input">
+            <span class="input-label" style="text-align:left">
+              <i class="ion-android-mail"></i>
+            </span>
+            <input type="text" placeholder="Email" value="">
+          </label>
+          <label class="item item-input">
+            <span class="input-label" style="text-align:left">
+              <i class="ion-chatbox"></i>
+            </span>
+            <textarea id="pengaduan" type="text" placeholder="Kendala / Permasalahan" value="" style="resize: none;height:60px"></textarea>
+          </label>
+        </div>
+        <div class="row">
+          <button type="submit" class="col-100 button-registration-first" ng-click="menu.list()">
+            <div class="text-home">KIRIM</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

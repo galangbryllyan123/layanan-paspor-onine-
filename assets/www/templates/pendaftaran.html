@@ -1,0 +1,141 @@
+<ion-view>
+
+  <!-- Header -->
+  <div class="bar bar-header toolbar-background">
+    <button class="button button-icon icon ion-ios-arrow-back" style="color:azure" ng-click="Kembali()"></button>
+    <div class="title">PENDAFTARAN AKUN</div>
+  </div>
+  <!-- End Header -->
+
+  <ion-content scroll="true" style="padding-top:5px;">
+    <div class="bg-head">
+      <div ng-if="RegisType == 'Registration'" class="margin-costum">
+        SAAT INI PENDAFTARAN HANYA DAPAT DILAKUKAN MENGGUNAKAN E-MAIL UMUM (GOOGLE & YAHOO) CEK KOTAK MASUK ATAU SPAM PADA E-MAIL
+        ANDA
+      </div>
+      <div class="form-pengaduan">
+        <div class="card list list-card-daftar">
+          <div class="margin-top-10"></div>
+
+          <!-- NIK -->
+          <label for="NIK">Nomor Induk Kependudukan</label>
+          <input id="NIK" placeholder="Nomor Induk Kependudukan" string-to-number class="input-costum-profil" type="number" ng-model="registration.NIK"
+            required />
+
+          <!-- Tanggal Lahir -->
+          <label for="TanggalLahir">Tanggal Lahir</label>
+          <input type="text" id="TanggalLahir" placeholder="Tanggal Lahir" class="input-costum-profil" input-date-picker-ionic="registration.Tanggal_Lahir"
+            format="DD/MM/YYYY" ng-model="tanggalLahir">
+
+          <!-- Agama -->
+          <!-- <label for="agama">Agama
+            <select id="agama" class="select-gender" ng-model="registration.Agama" required>
+              <option disabled selected value="">Agama</option>
+              <option value="ISLAM">Islam</option>
+              <option value="KRISTEN">Kristen</option>
+              <option value="HINDU">Hindu</option>
+              <option value="BUDHA">Budha</option>
+              <option value="KATHOLIK">Katholik</option>
+              <option value="KONGHUCU">Konghucu</option>
+            </select>
+          </label> -->
+
+          <!-- Nama Lengkap -->
+          <label for="NamaLengkap">Nama Lengkap</label>
+          <input id="NamaLengkap" placeholder="Nama Lengkap" maxlength="200" class="input-costum-profil" type="text" ng-model="registration.Nama_Lengkap"
+             />
+
+          <!-- Username -->
+          <label for="Username">Username</label>
+          <input id="Username" placeholder="Username" maxlength="50" class="input-costum-profil" type="text" ng-model="registration.Username" ng-change="registration.Username = registration.Username.split(' ').join('')"
+            ng-keyup="re" ng-trim="false" required/>
+
+          <!-- Password -->
+          <label for="Password">Password</label>
+          <input id="Password" placeholder="Password" class="input-costum-profil" type="password" ng-model="registration.Kata_Sandi"
+            ng-change="registration.Kata_Sandi = registration.Kata_Sandi.split(' ').join('')" ng-keyup="re" ng-trim="false"
+            required/>
+
+          <!-- Konfirmasi Password -->
+          <label for="ConfirmPassword">Konfirmasi Password</label>
+          <input id="ConfirmPassword" placeholder="Konfirmasi Password" class="input-costum-profil" type="password" ng-model="ConfirmPassword"
+            ng-change="ConfirmPassword = ConfirmPassword.split(' ').join('')" ng-keyup="re" ng-trim="false" required/>
+
+          <!-- Email Google -->
+          <!-- <span ng-if="registration.EmailMedsos">
+            <label for="EmailMedsos">Email</label>
+            <input id="EmailMedsos" placeholder="Email" autocomplete="off" autocorrect="off" autocapitalize="off" class="input-costum-profil"
+              type="text" ng-model="registration.EmailMedsos" ng-change="registration.Email = registration.Email.split(' ').join('')"
+              ng-keyup="re" ng-trim="false" required disabled/>
+          </span> -->
+
+          <!-- Email -->
+          <span ng-ifs="!registration.EmailMedsos">
+            <label for="Email">Email</label>
+            <input id="Email" placeholder="Email" autocomplete="off" maxlength="50" autocorrect="off" autocapitalize="off" class="input-costum-profil"
+              type="text" ng-model="registration.Email" ng-disabled="fromMedsosReg" ng-change="registration.Email = registration.Email.split(' ').join('')"
+              ng-keyup="re" ng-trim="false" required/>
+          </span>
+
+          <!-- Nomor Telepon -->
+          <label for="NomorHandphone">Nomor Handphone</label>
+          <input id="NomorHandphone" placeholder="Nomor Handphone" class="input-costum-profil" string-to-number type="number" ng-model="registration.Nomor_Handphone"
+          />
+
+          <!-- Jenis Kelamin -->
+          <label for="Gender">Jenis Kelamin
+            <select id="Gender" class="select-gender" ng-model="registration.Jenis_Kelamin" required>
+              <option disabled selected value="">Jenis Kelamin</option>
+              <option value="M">Laki - laki</option>
+              <option value="F">Perempuan</option>
+            </select>
+          </label>
+
+          <!-- Alamat -->
+          <label for="Alamat">Alamat Sesuai KTP</label>
+          <textarea id="Alamat" placeholder="Alamat Sesuai KTP" class="input-costum-profil margin-bottom-10" maxlength="200" ng-model="registration.Alamat"  ></textarea>
+
+          <!-- Provinsi -->
+          <button class="button-modal" modal-select="" ng-model="modalSelected.Provinsi" options="dataObjProvinsi" load-list-message="Harap tunggu..."
+            search-placeholder="Pencarian" cancel-search-button="Hapus" reset-button="ATUR ULANG" cancel-button="BATAL" has-search="true"
+            search-properties="['area_name']" modal-title="PILIH PROVINSI">
+            <div class="option">
+              <h2>{{option.area_name}}</h2>
+            </div>
+            <label for="Provinsi">Provinsi</label>
+            <input id="Provinsi" readonly placeholder="Provinsi" class="input-costum-area" type="text" ng-model="modalSelected.Provinsi.area_name"
+              required />
+          </button>
+
+          <!-- Kabupaten / Kota -->
+          <button class="button-modal" ng-disabled="dataObjKabupaten.length == undefined" modal-select="" ng-model="modalSelected.Kabupaten"
+            options="dataObjKabupaten" load-list-message="Harap tunggu..." search-placeholder="Pencarian" cancel-search-button="Hapus"
+            reset-button="ATUR ULANG" cancel-button="BATAL" has-search="true" search-properties="['city_name']" modal-title="PILIH KABUPATEN/KOTA">
+            <div class="option">
+              <h2>{{option.city_name}}</h2>
+            </div>
+            <label for="KabupatenKota">Kabupaten / Kota</label>
+            <input id="KabupatenKota" readonly placeholder="Kabupaten / Kota" class="input-costum-area" type="text" ng-model="modalSelected.Kabupaten.city_name">
+          </button>
+
+          <!-- Kecamatan -->
+          <button class="button-modal" ng-disabled="registration.Kabupaten.length == undefined" modal-select="" ng-model="modalSelected.Kecamatan"
+            options="dataObjKecamatan" load-list-message="Harap tunggu..." search-placeholder="Pencarian" cancel-search-button="Hapus"
+            reset-button="ATUR ULANG" cancel-button="BATAL" has-search="true" search-properties="['district_name']" modal-title="PILIH KECAMATAN">
+            <div class="option">
+              <h2>{{option.district_name}}</h2>
+            </div>
+            <label for="Kecamatan">Kecamatan</label>
+            <input id="Kecamatan" readonly placeholder="Kecamatan" class="input-costum-area" type="text" ng-model="modalSelected.Kecamatan.district_name">
+          </button>
+
+        </div>
+        <div class="row margin-bottom-20">
+          <button type="submit" class="col-100 button-registration-first margin-button" ng-click="Daftar(ConfirmPassword)">
+            <div class="text-home">DAFTAR</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

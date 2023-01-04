@@ -1,0 +1,173 @@
+{
+  "adminarea": [{
+    "id": "603EA419-A419-A26A-333A-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "11",
+    "area_name": "Aceh"
+  },{
+    "id": "603EE0A7-E0A7-7973-41C6-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "51",
+    "area_name": "Bali"
+  },{
+    "id": "603EDE6B-DE6B-6887-4133-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "36",
+    "area_name": "Banten"
+  },{
+    "id": "603EC106-C106-535F-3A8E-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "17",
+    "area_name": "Bengkulu"
+  },{
+    "id": "603EDA43-DA43-1BC0-404F-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "34",
+    "area_name": "DI Yogyakarta"
+  },{
+    "id": "603ECE6B-CE6B-A1E1-3D6E-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "31",
+    "area_name": "DKI Jakarta"
+  },{
+    "id": "603EF443-F443-9F1A-4791-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "75",
+    "area_name": "Gorontalo"
+  },{
+    "id": "603EBE2B-BE2B-1148-39BD-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "15",
+    "area_name": "Jambi"
+  },{
+    "id": "603ECFB2-CFB2-0216-3E2F-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "32",
+    "area_name": "Jawa Barat"
+  },{
+    "id": "603ED5C4-D5C4-D6F0-3F60-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "33",
+    "area_name": "Jawa Tengah"
+  },{
+    "id": "603EDB77-DB77-B68C-4085-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "35",
+    "area_name": "Jawa Timur"
+  },{
+    "id": "603EE6EE-E6EE-CABC-43E3-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "61",
+    "area_name": "Kalimantan Barat"
+  },{
+    "id": "603EE9E4-E9E4-E691-4479-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "63",
+    "area_name": "Kalimantan Selatan"
+  },{
+    "id": "603EE841-E841-390D-4429-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "62",
+    "area_name": "Kalimantan Tengah"
+  },{
+    "id": "603EEB9D-EB9D-4D3E-44DB-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "64",
+    "area_name": "Kalimantan Timur"
+  },{
+    "id": "603F2160-2160-AF6F-516C-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "65",
+    "area_name": "Kalimantan Utara"
+  },{
+    "id": "603ECAAE-CAAE-8013-3C9E-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "21",
+    "area_name": "Kepualan Riau"
+  },{
+    "id": "603F251F-251F-EBD3-525B-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "19",
+    "area_name": "Kepulauan Bangka Belitung"
+  },{
+    "id": "603EC251-C251-444A-3AC7-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "18",
+    "area_name": "Lampung"
+  },{
+    "id": "603EF702-F702-4295-4824-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "81",
+    "area_name": "Maluku"
+  },{
+    "id": "603EF81C-F81C-A0E8-4854-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "82",
+    "area_name": "Maluku Utara"
+  },{
+    "id": "603EE249-E249-2D67-42C5-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "52",
+    "area_name": "Nusa Tenggara Barat"
+  },{
+    "id": "603EE3D4-E3D4-9417-4313-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "53",
+    "area_name": "Nusa Tenggara Timur"
+  },{
+    "id": "603EF95A-F95A-8FD5-4897-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "91",
+    "area_name": "Papua"
+  },{
+    "id": "603EFAED-FAED-0187-48E7-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "92",
+    "area_name": "Papua Barat"
+  },{
+    "id": "603EBCDC-BCDC-63D7-38FD-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "14",
+    "area_name": "Riau"
+  },{
+    "id": "603EF5E3-F5E3-D7B1-47EF-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "76",
+    "area_name": "Sulawesi Barat"
+  },{
+    "id": "603EF138-F138-CB5E-4636-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "73",
+    "area_name": "Sulawesi Selatan"
+  },{
+    "id": "603EEEB9-EEB9-5CB3-457C-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "72",
+    "area_name": "Sulawesi Tengah"
+  },{
+    "id": "603EF2BF-F2BF-B5F7-46AB-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "74",
+    "area_name": "Sulawesi Tenggara"
+  },{
+    "id": "603EED25-ED25-4883-4529-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "71",
+    "area_name": "Sulawesi Utara"
+  },{
+    "id": "603EBFC1-BFC1-FB86-3A51-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "16",
+    "area_name": "Sumatera Selatan "
+  },{
+    "id": "603EBA89-BA89-8B2D-3870-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "13",
+    "area_name": "Sumatra Barat"
+  },{
+    "id": "603EB59C-B59C-A2C3-3745-E0531400A8C0",
+    "nation_id": "6F646E49-656E-6973-6120-202020202020",
+    "area_code": "12",
+    "area_name": "Sumatra Utara"
+  }]
+}

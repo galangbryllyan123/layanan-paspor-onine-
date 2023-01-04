@@ -1,0 +1,85 @@
+<ion-view view-title="PERMOHONAN BARU">
+
+  <!-- Header -->
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-ios-arrow-back" style="color:azure" ng-click="Kembali()"></button>
+    <div class="h1 title" style="color:azure">PERMOHONAN ANTRIAN PASPOR</div>
+  </div>
+  <!-- End Header -->
+
+  <ion-content ng-controller="PermohonanDetailCtrl">
+    <div class="bg-header-permohonan-detail">
+      <div class="form-container">
+        <div class="title content margin-top-10">
+          PERMOHONAN LEBIH DARI SATU
+          <br> HARUS DALAM SATU KELUARGA
+        </div>
+        <div class="card list" style="margin: 6px !important; margin-top: 13px !important">
+          <div class="item" style="text-align: center;font-weight: bold">
+            <!-- Wizard Form -->
+            <ul class="progress-indicator">
+              <li class="completed">
+                <span class="bubble"></span>
+                <div style="padding-top: 0px !Important;font-size: 12px !Important">Langkah 1</div>
+              </li>
+              <li class="completed">
+                <span class="bubble"></span>
+                <div style="padding-top: 0px !Important;font-size: 12px !Important">Langkah 2</div>
+              </li>
+              <li class="completed">
+                <span class="bubble"></span>
+                <div style="padding-top: 0px !Important;font-size: 12px !Important">Langkah 3</div>
+              </li>
+            </ul>
+            DATA PEMOHON
+          </div>
+          <div ng-show="selected > 0" class="item" ng-click="permohonanData(1)">
+            <a class="link" ng-class="{ 'has-data': dataPermohonan['index1'] }" style="text-align:center;padding:0px !important">
+              Masukkan Data Pemohon ke - 1
+              <span style="color:#008aeb">
+                <i class="icon ion-ios-checkmark"></i>
+              </span>
+            </a>
+          </div>
+          <div ng-show="button2" class="item" ng-click="permohonanData(2)">
+            <a class="link" ng-class="{ 'has-data': dataPermohonan['index2'] }" style="text-align:center;padding:0px !important">
+              Masukkan Data Pemohon ke - 2
+              <span style="color:#008aeb">
+                <i class="icon ion-ios-checkmark"></i>
+              </span>
+            </a>
+          </div>
+          <div ng-show="button3" class="item" ng-click="permohonanData(3)">
+            <a class="link" ng-class="{ 'has-data': dataPermohonan['index3'] }" style="text-align:center;padding:0px !important">
+              Masukkan Data Pemohon ke - 3
+              <span style="color:#008aeb">
+                <i class="icon ion-ios-checkmark"></i>
+              </span>
+            </a>
+          </div>
+          <div ng-show="button4" class="item" ng-click="permohonanData(4)">
+            <a class="link" ng-class="{ 'has-data': dataPermohonan['index4'] }" style="text-align:center;padding:0px !important">
+              Masukkan Data Pemohon ke - 4
+              <span style="color:#008aeb">
+                <i class="icon ion-ios-checkmark"></i>
+              </span>
+            </a>
+          </div>
+          <div ng-show="button5" class="item" ng-click="permohonanData(5)">
+            <a class="link" ng-class="{ 'has-data': dataPermohonan['index5'] }" style="text-align:center;padding:0px !important">
+              Masukkan Data Pemohon ke - 5
+              <span style="color:#008aeb">
+                <i class="icon ion-ios-checkmark"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit" class="col-100 button-registration-first" ng-disabled="!checkIsCompletedInput()" ng-click="simpan()">
+            <div class="text-home">SIMPAN</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

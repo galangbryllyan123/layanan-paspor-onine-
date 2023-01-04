@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:hardwareAccelerated="true" android:versionCode="20703" android:versionName="2.7.3" package="id.go.imigrasi.layananwni" platformBuildVersionCode="26" platformBuildVersionName="8.0.0">
+	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" />
+	<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-feature android:name="android.hardware.location.gps" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
+	<permission android:name="id.go.imigrasi.layananwni.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="id.go.imigrasi.layananwni.permission.RECEIVE_ADM_MESSAGE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.FLASHLIGHT" />
+	<uses-feature android:name="android.hardware.camera" android:required="true" />
+	<permission android:name="id.go.imigrasi.layananwni.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="id.go.imigrasi.layananwni.permission.C2D_MESSAGE" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+	<uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+	<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+	<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+	<uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" />
+	<uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" />
+	<uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_APP_BADGE" />
+	<uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+	<uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+	<application android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:name="android.support.multidex.MultiDexApplication" android:supportsRtl="true">
+		<activity android:configChanges="keyboard|keyboardHidden|locale|orientation|screenSize" android:label="@string/activity_name" android:launchMode="singleTop" android:name="id.go.imigrasi.layananwni.MainActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
+			<intent-filter android:label="@string/launcher_name">
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<provider android:authorities="id.go.imigrasi.layananwni.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
+		</provider>
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_app_id" />
+		<meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@string/fb_app_name" />
+		<activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/fb_app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<receiver android:exported="false" android:name="de.appplant.cordova.plugin.localnotification.TriggerReceiver" />
+		<receiver android:exported="false" android:name="de.appplant.cordova.plugin.localnotification.ClearReceiver" />
+		<activity android:exported="false" android:launchMode="singleInstance" android:name="de.appplant.cordova.plugin.localnotification.ClickActivity" android:theme="@android:style/Theme.NoDisplay" />
+		<receiver android:exported="false" android:name="de.appplant.cordova.plugin.notification.TriggerReceiver" />
+		<receiver android:exported="false" android:name="de.appplant.cordova.plugin.notification.ClearReceiver" />
+		<receiver android:exported="false" android:name="de.appplant.cordova.plugin.localnotification.RestoreReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+		<activity android:exported="false" android:launchMode="singleInstance" android:name="de.appplant.cordova.plugin.notification.ClickActivity" android:theme="@android:style/Theme.NoDisplay" />
+		<meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode" />
+		<activity android:name="io.anyline.cordova.BarcodeActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="io.anyline.cordova.MrzActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="io.anyline.cordova.EnergyActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="io.anyline.cordova.AnylineOcrActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="io.anyline.cordova.LicensePlateActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="io.anyline.cordova.DocumentActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<enable-feature xmlns:amazon="http://schemas.amazon.com/apk/res/android" android:name="com.amazon.device.messaging" android:required="false" />
+		<service android:exported="false" android:name="com.onesignal.ADMMessageHandler" />
+		<receiver android:name="com.onesignal.ADMMessageHandler$Receiver" android:permission="com.amazon.device.messaging.permission.SEND">
+			<intent-filter>
+				<action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+				<action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+				<category android:name="id.go.imigrasi.layananwni" />
+			</intent-filter>
+		</receiver>
+		<activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.google.zxing.client.android.CaptureActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity android:label="Share" android:name="com.google.zxing.client.android.encode.EncodeActivity" />
+		<activity android:exported="true" android:name="com.facebook.CustomTabActivity" />
+		<meta-data android:name="android.support.VERSION" android:value="26.1.0" />
+		<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+		<meta-data android:name="onesignal_app_id" android:value="" />
+		<meta-data android:name="onesignal_google_project_number" android:value="str:REMOTE" />
+		<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter android:priority="999">
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<category android:name="id.go.imigrasi.layananwni" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.onesignal.NotificationOpenedReceiver" />
+		<service android:name="com.onesignal.GcmIntentService" />
+		<service android:name="com.onesignal.GcmIntentJobService" android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service android:name="com.onesignal.SyncJobService" android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service android:name="com.onesignal.RestoreJobService" android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service android:name="com.onesignal.RestoreKickoffJobService" android:permission="android.permission.BIND_JOB_SERVICE" />
+		<service android:name="com.onesignal.SyncService" />
+		<activity android:name="com.onesignal.PermissionsActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<service android:name="com.onesignal.NotificationRestoreService" />
+		<receiver android:name="com.onesignal.BootUpReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.ACTION_BOOT_COMPLETED" />
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.QUICKBOOT_POWERON" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.onesignal.UpgradeReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+			</intent-filter>
+		</receiver>
+		<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
+		<meta-data android:name="com.android.vending.derived.apk.id" android:value="1" />
+	</application>
+</manifest>

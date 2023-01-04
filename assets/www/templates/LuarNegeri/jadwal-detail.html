@@ -1,0 +1,68 @@
+<ion-view view-title="JADWAL ANDA">
+
+  <!-- Header -->
+  <div class="bar bar-header" style="background-color: #D11418">
+    <button class="button button-icon icon ion-ios-arrow-back" style="color:azure" ng-click="Back()"></button>
+    <div class="h1 title" style="color:azure">JADWAL ANTRIAN</div>
+  </div>
+  <!-- End Header -->
+
+  <ion-content scroll="true">
+    <div class="bg-header-lupapassword">
+      <div class="form-container">
+        <div class="margin-top-20"></div>
+        <div id="id-qr-code">
+          <div class="card" style="margin-bottom: 0px !important">
+            <div class="row">
+              <div class="col col-100" style="text-align:center;font-size:16px;font-weight:bold">{{SERVICE_DATE | date: DD/MMMM/YYYY}}</div>
+            </div>
+            <div class="item item-text-wrap" style="padding:5px !important">
+              <div class="row row-5-padding" ng-if="NIK">
+                <div class="col col-25 font-jadwal">NIK</div>
+                <div class="col col-75 font-jadwal">:&nbsp;{{APPLICANT_ID}}</div>
+              </div>
+              <div class="row row-5-padding" ng-if="PasporNumber">
+                <div class="col col-25 font-jadwal">Nomor Paspor</div>
+                <div class="col col-75 font-jadwal">:&nbsp;{{PASSPORT_NUMBER}}</div>
+              </div>
+              <div class="row row-5-padding">
+                <div class="col col-25 font-jadwal">Nama</div>
+                <div class="col col-75 font-jadwal">:&nbsp;{{FULLNAME}}</div>
+              </div>
+              <div class="row row-5-padding">
+                <div class="col col-25 font-jadwal">Tempat</div>
+                <div class="col col-75 font-jadwal">:&nbsp;{{UNIT_NAME}}</div>
+              </div>
+              <div class="row row-5-padding">
+                <div class="col col-25 font-jadwal">Waktu</div>
+                <div class="col col-75 font-jadwal">:&nbsp;{{timeMeet(START_TIME, END_TIME)}}</div>
+              </div>
+              <div class="row row-no-padding center">
+                <div class="col col-100 center">
+                  <div class="kode-booking-text margin-top-percent-5">Kode Booking</div>
+                  <input type="text" ng-model="KODE_ANTRIAN" class="jadwal-content-detail center" disabled>
+                </div>
+              </div>
+              <div class="center">
+                <qrcode data="{{hasilQR}}" version="2" error-correction-level="H" size="250"></qrcode>
+              </div>
+              <div class="text-info-jadwal">Tunjukkan Bukti Pendaftaran Antrian Paspor Online Ini Pada Petugas Kantor Imigrasi/Unit Layanan Paspor</div>
+            </div>
+          </div>
+          <div class="row row-5-padding">
+            <div class="col center">
+              <button class="btn-close col" ng-click="Batal()">
+                <div class="text-home">BATALKAN</div>
+              </button>
+            </div>
+            <div class="col center">
+              <button class="btn-profil col" ng-click="Jadwal()">
+                <div class="text-home">SIMPAN PDF</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,117 @@
+.margin-1 {
+  margin: 1px;
+}
+
+.margin-2 {
+  margin: 2px;
+}
+
+.margin-3 {
+  margin: 3px;
+}
+
+.margin-4 {
+  margin: 4px;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
+.margin-6 {
+  margin: 6px;
+}
+
+.margin-7 {
+  margin: 7px;
+}
+
+.margin-8 {
+  margin: 8px;
+}
+
+.margin-9 {
+  margin: 9px;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.modal-permission-wrapper {
+  margin-top: 15px;
+}
+
+.first-app-look-wrapper .styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.first-app-look-wrapper .styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+.first-app-look-wrapper .styled-checkbox + label:before {
+  content: "";
+  margin-top: 5px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+}
+.first-app-look-wrapper .styled-checkbox:hover + label:before {
+  background: #6f9fab;
+}
+.first-app-look-wrapper .styled-checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+.first-app-look-wrapper .styled-checkbox:checked + label:before {
+  background: #6f9fab;
+}
+.first-app-look-wrapper .styled-checkbox:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+.first-app-look-wrapper .styled-checkbox:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+.first-app-look-wrapper .styled-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 23px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
+.first-app-look-wrapper .for-iframe {
+  position: absolute;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+}
+.first-app-look-wrapper .for-iframe .close-icon {
+  float: right;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.first-app-look-wrapper .link {
+  color: #ffce00;
+  text-decoration: underline;
+}
+.first-app-look-wrapper .btn-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.first-app-look-wrapper .btn-wrapper .btn-next {
+  background: #D11418;
+  color: white;
+}
+
+/*# sourceMappingURL=css-sass.css.map */

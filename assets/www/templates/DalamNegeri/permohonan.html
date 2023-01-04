@@ -1,0 +1,91 @@
+<ion-view>
+
+  <!-- Header -->
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-ios-arrow-back" style="color:azure" ng-click="Kembali()"></button>
+    <div class="h1 title" style="color:azure">PERMOHONAN ANTRIAN PASPOR</div>
+  </div>
+  <!-- End Header -->
+  <ion-content scroll="true">
+    <div class="bg-head">
+      <div class="title content">
+        PILIH JENIS PERMOHONAN, TANGGAL DAN WAKTU KEDATANGAN
+      </div>
+      <div class="form-pengaduan">
+        <div class="card list list-card-daftar">
+          <div class="margin-top-10"></div>
+
+          <!-- Wizard Form -->
+          <ul class="progress-indicator">
+            <li class="completed">
+              <span class="bubble"></span>
+              <div style="padding-top: 0px !Important;font-size: 12px !Important">Langkah 1</div>
+            </li>
+            <li class="completed">
+              <span class="bubble"></span>
+              <div style="padding-top: 0px !Important;font-size: 12px !Important">Langkah 2</div>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <div style="padding-top: 0px !Important;font-size: 12px !Important">Langkah 3</div>
+            </li>
+          </ul>
+
+          <!-- Jumlah Pemohon-->
+          <label for="JumlahPemohon">Jumlah Pemohon
+            <select id="JumlahPemohon" class="select-gender" name="selection" ng-options="select for select in getNumber(JumlahPemohon)"
+              ng-change="changeJumlahPemohon(); getButton()" ng-model="form.jumlah">
+              <option disabled selected value="">Jumlah Pemohon</option>
+            </select>
+          </label>
+
+          <!-- Pilih Tanggal Kedatangan -->
+          <label for="date">Pilih Tanggal Kedatangan</label>
+          <input placeholder="Pilih Tanggal Kedatangan" readonly ng-click="pilihTanggal()" class="input-costum-profil-tanggal" type="text"
+            id="date" ng-model="form.tanggalTampil" />
+          <input class="input-costum-profil-tanggal" type="hidden" ng-model="form.tanggal" />
+
+          <div class="row no-padding-row">
+            <button class="btn-detail col col-100 center" ng-click="Collapse()">
+              <div class="text-home">DATA KUOTA DAN PENGANTRI</div>
+            </button>
+          </div>
+
+          <label>Pilih Waktu Kedatangan</label>
+          <br>
+          <div class="radio-item top">
+            <input type="radio" id="Pagi" ng-change="pagiSiang()" ng-disabled="!dateHasSelected" name="WaktuKedatangan" ng-model="form.waktu" value="Pagi" class="input-costum-profil">
+            <label for="Pagi" style="padding-left:5px !important;margin-left:5px !important">Pagi (08:00 s/d 12:00)</label>
+          </div>
+          
+          <div class="radio-item">
+            <input type="radio" id="Siang" ng-change="pagiSiang()" ng-disabled="!dateHasSelected" name="WaktuKedatangan" ng-model="form.waktu" value="Siang" class="input-costum-profil">
+            <label for="Siang" style="padding-left:5px !important;margin-left:5px !important;">Siang (13:00 s/d 16:00 / 16:30)</label>
+          </div>
+          <br>
+          <br>
+          <!-- Kuota Tersedia -->
+          <label for="Kuota">Kuota Tersedia</label>
+          <input id="Kuota" placeholder="Kuota Tersedia" value="" class="input-costum-profil" type="text" ng-model="form.quotaSedia"
+            readonly />
+
+          <!-- Email-->
+          <label for="Email">Email</label>
+          <input id="Email" placeholder="Email" autocomplete="off" autocorrect="off" autocapitalize="off" value="" class="input-costum-profil" type="email" ng-model="DataUser.EMAIL"
+            readonly />
+
+          <!-- Kantor Imigrasi-->
+          <label for="KantorImigrasi">Kantor Imigrasi</label>
+          <input id="KantorImigrasi" placeholder="Kantor Imigrasi" value="" class="input-costum-profil" type="text" ng-model="kantorTerpilih.UNIT_NAME"
+            readonly />
+        </div>
+      </div>
+      <div class="row margin-bottom-20">
+        <button type="submit" class="col button-costum-first-permohonan" ng-click="PermohonanDetail()">
+          <div class="text-home">LANJUT</div>
+        </button>
+      </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

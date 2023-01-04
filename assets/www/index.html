@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>LAYANAN WNI</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/css-sass.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/splash.css" rel="stylesheet">
+  <link href="assets/css/wizard-form.css" rel="stylesheet">
+  <link href="assets/css/animate.css" rel="stylesheet">
+  <link href="assets/css/angular-tooltips.css" rel="stylesheet">
+  <link href="assets/css/map.css" rel="stylesheet">
+  <link href="https://js.arcgis.com/3.16/esri/css/esri.css" rel="stylesheet">
+  <link href="plugin/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="plugin/fontawesome/css/all.css" rel="stylesheet">
+  <script src="lib/moment/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="lib/sweetalert2/dist/sweetalert2.all.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/sweetalert2/dist/sweetalert2.css">
+
+  <!-- PDF -->
+  <script src="lib/pdf/dom-to-image.min.js"></script>
+  <script src="lib/pdf/jspdf.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+</head>
+
+<body ng-app="starter" ng-controller="GlobalCtrl">
+
+  <ion-nav-view>
+    <div style="display: none;" ng-include="alertPermohonan"></div>
+  </ion-nav-view>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- Modal Select -->
+  <script src="lib/ionic-modal-select/dist/ionic-modal-select.js"></script>
+
+  <!-- qr generrator -->
+  <!-- https://github.com/monospaced/angular-qrcode -->
+  <script src="lib/qrcode-generator/qrcode.js"></script>
+  <script src="lib/qrcode-generator/qrcode_UTF8.js"></script>
+  <script src="lib/angular-qrcode/angular-qrcode.js"></script>
+  <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+  <!-- your app's js -->
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/sprintf.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/services.js"></script>
+  <script src="https://js.arcgis.com/3.16compact/"></script>
+  <script src="assets/js/angular-esri-map@1.js"></script>
+  <!-- <script src="assets/js/controllers.js"></script> -->
+  <script src="assets/js/controllers/GlobalCtrl.js"></script>
+  <script src="assets/js/ctrl2.js"></script>
+  <script src="assets/js/native.js"></script>
+  <script src="assets/js/non-interactive-map.js"></script>
+  <script src="assets/js/controllers/FirstAppLookCtrl.js"></script>
+  <script src="assets/js/controllers/BerandaLuarCtrl.js"></script>
+  <script src="assets/js/controllers/HomeCtrl.js"></script>
+  <script src="assets/js/controllers/JadwalCtrl.js"></script>
+  <script src="assets/js/controllers/JadwalDetailCtrl.js"></script>
+  <script src="assets/js/controllers/JadwalDetailLuarNegeriCtrl.js"></script>
+  <script src="assets/js/controllers/JadwalLuarCtrl.js"></script>
+  <script src="assets/js/controllers/LaporDiriCtrl.js"></script>
+  <script src="assets/js/controllers/ListKanimCtrl.js"></script>
+  <script src="assets/js/controllers/ListKBRICtrl.js"></script>
+  <script src="assets/js/controllers/LoginCtrl.js"></script>
+  <script src="assets/js/controllers/LupaPasswordCtrl.js"></script>
+  <script src="assets/js/controllers/MainCtrl.js"></script>
+  <script src="assets/js/controllers/MainMenuCtrl.js"></script>
+  <script src="assets/js/controllers/MenuCtrl.js"></script>
+  <script src="assets/js/controllers/MenuDalamNegeriCtrl.js"></script>
+  <script src="assets/js/controllers/MenuInformasiBiayaCtrl.js"></script>
+  <script src="assets/js/controllers/MenuInformasiCtrl.js"></script>
+  <script src="assets/js/controllers/MenuInformasiPembatalanCtrl.js"></script>
+  <script src="assets/js/controllers/MenuInformasiPerubahanCtrl.js"></script>
+  <script src="assets/js/controllers/MenuInformasiProsedurCtrl.js"></script>
+  <script src="assets/js/controllers/MenuInformasiUmumCtrl.js"></script>
+  <script src="assets/js/controllers/MenuInformasiPersyaratanCtrl.js"></script>
+  <script src="assets/js/controllers/PanduanCtrl.js"></script>
+  <script src="assets/js/controllers/PanduanMenuCtrl.js"></script>
+  <script src="assets/js/controllers/PanduanPerpanjanganCtrl.js"></script>
+  <script src="assets/js/controllers/PendaftaranCtrl.js"></script>
+  <script src="assets/js/controllers/PengaduanCtrl.js"></script>
+  <script src="assets/js/controllers/PengaduanLuarNegeriCtrl.js"></script>
+  <script src="assets/js/controllers/PermohonanCtrl.js"></script>
+  <script src="assets/js/controllers/PermohonanDetailCtrl.js"></script>
+  <script src="assets/js/controllers/PermohonanDetailLuarNegeriCtrl.js"></script>
+  <script src="assets/js/controllers/PermohonanLuarNegeriCtrl.js"></script>
+  <script src="assets/js/controllers/PersyaratanCtrl.js"></script>
+  <script src="assets/js/controllers/ProfilCtrl.js"></script>
+  <script src="assets/js/controllers/SplashScreenCtrl.js"></script>
+  <script src="assets/js/controllers/AktivasiCtrl.js"></script>
+
+  <script src="assets/js/plugins/angular-tooltips.min.js"></script>
+  <script src="lib/angular-resource/angular-resource.min.js"></script>
+  <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+  <script src="lib/angular-img-fallback/angular.dcb-img-fallback.min.js"></script>
+  <script src="lib/angular-reverse-geocode/angular-reverse-geocode.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="lib/angular-bind-html-compile/angular-bind-html-compile.min.js"></script>
+
+  <!-- path to ionic -->
+  <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
+  <!-- PDF -->
+
+  <div ng-include="MyTemplate" ng-init="MyTemplate = 'templates/alert/templates.html'"></div>
+</body>
+
+</html>

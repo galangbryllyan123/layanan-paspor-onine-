@@ -1,0 +1,92 @@
+<ion-view cache-view="false" view-title="JADWAL ANTRIAN">
+
+  <!-- Header -->
+  <div class="bar bar-header">
+    <button class="button button-icon icon-button icon ion-navicon" style="color:azure" menu-toggle="left"></button>
+    <div class="h1 title" style="color:azure">JADWAL ANTRIAN</div>
+  </div>
+  <!-- End Header -->
+
+  <ion-content padding scroll="true">
+    <div class="bg-header-permohonan-detail">
+      <div class="form-container">
+        <div class="margin-top-percent-10">
+          <div class="card list list-card-daftar padding-10">
+            <!-- HEADER CONTENT -->
+            <div class="item item-divider judul-jadwal">
+              Pembuatan Paspor Baru
+            </div>
+            <!-- END HEADER CONTENT -->
+            <div class="list item-text-wrap" ng-if="PermohonanNull">
+              <div class="item notif-jadwal">
+                Anda Tidak Memiliki Permohonan Antrian
+              </div>
+            </div>
+            <div scroll="true" class="list item-text-wrap">
+              <a menu-close ng-click="JadwalDetailBaru(data)" ng-repeat="data in JadwalDataCreate" style="text-decoration:none;color:black;padding: 0px !important;"
+                class="item">
+                <div class="col col-100" style="padding: 5px !important">
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-75 jadwal-content bold">{{data.APPLICANT_ID}}</div>
+                  </div>
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-75 jadwal-content">{{data.FULL_NAME}}</div>
+                    <div class="col col-25 icon-jadwal">
+                      <button class="button-detail">KLIK DISINI</button>
+                    </div>
+                  </div>
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-75 jadwal-content">{{data.SERVICE_DATE | localdate}}</div>
+                  </div>
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-75 jadwal-content">{{data.UNIT_NAME}}</div>
+                  </div>
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-75 jadwal-content">{{timeMeet(data.START_TIME, data.END_TIME)}}</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- HEADER CONTENT -->
+            <div class="item item-divider judul-jadwal">
+              Penggantian / Perpanjangan Paspor
+            </div>
+            <!-- END HEADER CONTENT -->
+            <div class="list item-text-wrap" ng-if="PermohonanGantiNull">
+              <div class="item notif-jadwal">
+                Anda Tidak Memiliki Permohonan Antrian
+              </div>
+            </div>
+            <div scroll="true" class="list item-text-wrap">
+              <a menu-close ng-click="JadwalDetailPenggantian(data)" ng-repeat="data in JadwalDataUpdate" style="text-decoration:none;color:black;padding: 0px !important;"
+                class="item">
+                <div class="col col-100" style="padding: 5px !important">
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-75 jadwal-content bold">{{data.PASSPORT_NUMBER}}</div>
+                  </div>
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-70">{{data.FULL_NAME}}</div>
+                    <div class="col col-30 icon-jadwal">
+                      <button class="button-detail">KLIK DISINI</button>
+                    </div>
+                  </div>
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-75 jadwal-content">{{data.SERVICE_DATE | localdate}}</div>
+                  </div>
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-75 jadwal-content">{{data.UNIT_NAME}}</div>
+                  </div>
+                  <div class="row" style="line-height: 1;padding:0px !important">
+                    <div class="col col-75 jadwal-content">{{timeMeet(data.START_TIME, data.END_TIME)}}</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

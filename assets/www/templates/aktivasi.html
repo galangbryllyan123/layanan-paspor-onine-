@@ -1,0 +1,40 @@
+<ion-view>
+
+  <!-- Header -->
+  <div class="bar bar-header" style="background-color: #D11418">
+    <button class="button button-icon icon ion-ios-arrow-back" style="color:azure" ui-sref="login"></button>
+    <div class="h1 title" style="color:azure">KIRIM ULANG VALIDASI EMAIL</div>
+  </div>
+  <!-- End Header -->
+
+  <ion-content scroll="false">
+
+    <!-- HEADER -->
+    <div class="bg-header-lupapassword">
+      <div class="form-container">
+        <div class="forget-password">
+          <div class="col-100 center">
+            <img src="assets/img/logo-imigrasi.png" class="img-responsive">
+          </div>
+          <div class="col-100">
+            <div class="text">DIREKTORAT JENDERAL IMIGRASI</div>
+            <div class="subtext">KEMENTERIAN HUKUM DAN HAK ASASI MANUSIA</div>
+          </div>
+        </div>
+        <!-- END HEADER -->
+        <div class="row">
+          <div class="col col-100 center">
+            <input type="text" class="input-forget-password" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Masukkan Email Anda" ng-model="user.EMAIL" ng-change="registration.Email = registration.Email.split(' ').join('')" ng-keyup="re" ng-trim="false" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-100 center">
+            <button ng-disabled="SendingData" class="btn-login col" ng-click="Resend()">
+              <div class="text-home">{{SendingData ? 'MENGIRIM...' : 'KIRIM'}}</div>
+            </button>
+          </div>
+        </div>
+      </div>
+  </ion-content>
+
+</ion-view>

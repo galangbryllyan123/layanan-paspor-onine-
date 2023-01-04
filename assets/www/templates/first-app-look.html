@@ -1,0 +1,43 @@
+<ion-view class="first-app-look-wrapper">
+  <!-- CONTENT -->
+  <div class="for-iframe" ng-show="showIframe">
+    <i class="close-icon icon ion-close-round" ng-click="hideIframe()"></i>
+    <iframe width="100%" height="100%" src="{{urlIframe}}"></iframe>
+  </div>
+  <ion-content class="bgimg-1">
+    <div class="container" style="padding: 10px;">
+      <div class="col-100 margin-top-20 padding-left-70 padding-right-70 center">
+        <img src="assets/img/logo-imigrasi.png" class="img-responsive">
+      </div>
+        <div class="col-100 text-center">
+          <h5 class="head-title text-white">
+          Direktorat Jenderal Imigrasi
+        </h5>
+          <h5 class="sub-title text-white">Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia</h5>
+        </div>
+      </div>
+    </div>
+    <div class="row margin-5">
+      <div class="col-5">
+        <input class="styled-checkbox" ng-model="form.cbChecked" value="true" id="styled-checkbox-1" type="checkbox">
+        <label for="styled-checkbox-1"></label>
+      </div>
+      <div class="col no-margin no-padding">
+        <span ng-click="checkCb()">Saya setuju dengan</span> <a class="link" ng-click="changeIframe('http://mobile.imigrasi.go.id/MobileRedirect/app/pelayananwni/legal/termsagreement_id.html')">Syarat & Ketentuan</a> <span ng-click="checkCb()">dan</span> <a class="link" ng-click="changeIframe('http://mobile.imigrasi.go.id/MobileRedirect/app/pelayananwni/legal/privacypolicy_id.html')">Kebijakan privasi</a> <span ng-click="checkCb()">Aplikasi Layanan Paspor Online, serta dengan pengumpulan informasi pribadi dan sensitif mengenai diri saya</span>
+      </div>
+    </div>
+    <div class="row btn-wrapper">
+      <button ng-disabled="!form.cbChecked" ng-click="Confirm()" class="col btn-next button button-block">Konfirmasi</button>
+    </div>
+  </ion-content>
+  <div class="footer font-size-100 row" style="padding: 10px">
+    <div class="col-75 footer-greet left">
+      Selamat Datang di Aplikasi Layanan Paspor Online
+    </div>
+    <div class="col-35">
+      <div class="font-size-50px">
+        <i class="im im-icon-Ticket sign"></i>
+      </div>
+    </div>
+  </div>
+</ion-view>

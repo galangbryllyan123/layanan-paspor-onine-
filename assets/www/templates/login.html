@@ -1,0 +1,73 @@
+<ion-view>
+  <!-- CONTENT -->
+  <ion-content padding scroll="true">
+
+    <!-- HEADER -->
+    <div class="bg-headers">
+      <div class="form-container">
+        <div class="vertical-align">
+          <ion-row>
+            <ion-col col-12>
+              <img src="assets/img/logo-imigrasi.png" style="height:105px;width:190px">
+            </ion-col>
+            <ion-col col-12>
+              <div class="text">DIREKTORAT JENDERAL IMIGRASI</div>
+              <div class="subtext">KEMENTERIAN HUKUM DAN HAK ASASI MANUSIA</div>
+            </ion-col>
+          </ion-row>
+        </div>
+        <!-- END HEADER -->
+
+        <!-- CONTENT -->
+        <div class="card margin-4">
+          <div class="row">
+            <div class="col col-100 center">
+              <input type="text" class="validate username" placeholder="Username" ng-model="user.USERNAME" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-100 center">
+              <input type="password" class="validate password" placeholder="Password" ng-model="user.PASSWORD" required>
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 0px !important">
+            <div class="col col-100 center">
+              <button class="btn-login col" ng-click="Login(user)">
+                <div class="text-home">LOGIN</div>
+              </button>
+            </div>
+          </div>
+          <!-- <center class="teks-hr" ng-if="deviceIos">Atau</center> -->
+          <center class="teks-hr" ng-ifs="!deviceIos">Atau Login / Daftar Dengan</center>
+          <div class="row" style="margin-bottom: 0px !important">
+            <div class="row" ng-ifs="!deviceIos">
+              <div class="col col-100 center">
+                <button class="btn-google col" ng-click="googleLogin()">
+                  <div class="text-home">
+                    <i class="fab fa-google"></i>&nbsp;&nbsp;&nbsp;Google
+                  </div>
+                </button>
+              </div>
+              <div class="col col-100 center">
+                <button class="btn-facebook col" ng-click="facebookLogin()">
+                  <div class="text-home">
+                    <i class="fab fa-facebook"></i>&nbsp;&nbsp;&nbsp;Facebook
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col col-100 center">
+            <div class="row nopadding">
+              <!-- <button class="btn-google col" ng-click="Pendaftaran()">
+                <div class="text-home">
+                  <i class="fab"></i>Daftar Disini
+                </div>
+              </button> -->
+              <a class="button button-not-animate col col-50 teks-hr center" ng-click="LupaPassword()">Lupa Password</a>
+            </div>
+          </div>
+        </div>
+      </ion-content>
+      <!-- END CONTENT -->
+    </ion-view>

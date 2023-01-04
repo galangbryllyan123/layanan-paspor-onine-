@@ -1,0 +1,2129 @@
+#esriMap {
+  padding: $size-no-0;
+  margin: $size-no-0;
+  height: $size-250;
+  z-index: -1;
+
+  @media screen and (max-width: 360px) {
+    height: $size-210;
+  }
+}
+
+html,
+body {
+  height: $percent-100 !important;
+}
+
+.avatar-photo {
+  width: $size-60;
+  height: $auto;
+  border-radius: $percent-50
+}
+
+.avatar-photo.map {
+  height: $size-60 !important;
+}
+
+.maps-address-title {
+  font-weight: $bold;
+  color: $red;
+  margin-top: $size-no-0
+}
+
+.background {
+  background: $background;
+  background-size: $percent-100 $percent-100;
+  background-repeat: $norepeat;
+  color: $white;
+  font-size: $size-18;
+  position: $fixed;
+  width: $percent-100;
+}
+
+.bar-header {
+  background-color: $red !important;
+  color: $white !important;
+}
+
+.bar.bar-stable .title {
+  color: $white;
+}
+
+.bg-head {
+  background-color: $red !important;
+  background-size: $cover;
+  background-repeat: $norepeat;
+  background-position: $center $center;
+  border-bottom-left-radius: $size-30 !important;
+  border-bottom-right-radius: $size-30 !important;
+  content: "";
+  height: $size-300;
+  left: $size-no-0;
+  margin-top: $percent-5;
+  position: $absolute;
+  right: $size-no-0;
+  top: $size-no-0 !important;
+  width: $percent-100;
+}
+
+option:disabled {
+  color: #ccc;
+}
+
+.bg-header {
+  background-color: $red !important;
+  background-size: $cover;
+  background-repeat: $norepeat;
+  background-position: $center $center;
+  border-bottom-left-radius: $size-30 !important;
+  border-bottom-right-radius: $size-30 !important;
+  content: "";
+  height: $size-200;
+  left: $size-no-0;
+  right: $size-no-0;
+  position: $absolute;
+  top: $size-no-0 !important;
+  width: $percent-100;
+
+  @media screen and (max-width: 360px) {
+    height: $size-185 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    height: $size-225 !important;
+  }
+}
+
+.bg-headers {
+  background-color: $red !important;
+  background-size: $cover;
+  background-repeat: $norepeat;
+  background-position: $center $center;
+  border-bottom-left-radius: $size-30 !important;
+  border-bottom-right-radius: $size-30 !important;
+  content: "";
+  height: $size-350;
+  left: $size-no-0;
+  position: $absolute;
+  right: $size-no-0;
+  top: $size-no-0 !important;
+  width: $percent-100;
+
+  @media screen and (max-width: 360px) {
+    height: $size-340 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    height: $size-360 !important;
+  }
+}
+
+.bg-header-permohonan-detail .form-container {
+  background-color: $red !important;
+  background-size: $cover;
+  background-repeat: $norepeat;
+  background-position: $center $center;
+  border-bottom-left-radius: $size-30 !important;
+  border-bottom-right-radius: $size-30 !important;
+  border: $size-no-0 !important;
+  margin: $size-no-0 $auto !important;
+  content: "";
+  height: $size-160;
+  left: $size-no-0;
+  position: $relative;
+  right: $size-no-0;
+  top: $size-no-0 !important;
+  width: $percent-100;
+  z-index: $size-no-1;
+
+  @media screen and (max-width: 360px) {
+    height: $size-150 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    height: $size-160 !important;
+  }
+}
+
+.bg-header-lupapassword .form-container {
+  background-color: $red !important;
+  background-size: $cover;
+  background-repeat: $norepeat;
+  background-position: $center $center;
+  border-bottom-left-radius: $size-30 !important;
+  border-bottom-right-radius: $size-30 !important;
+  border: $size-no-0 !important;
+  margin: $size-no-0 $auto !important;
+  content: "";
+  height: $size-250;
+  left: $size-no-0;
+  position: $relative;
+  right: $size-no-0;
+  top: $size-no-0 !important;
+  width: $percent-100;
+  z-index: $size-no-1;
+
+  @media screen and (max-width: 360px) {
+    height: $size-240 !important;
+  }
+}
+
+.bg-header-panduan .form-container {
+  background-color: $red !important;
+  background-size: $cover;
+  background-repeat: $norepeat;
+  background-position: $center $center;
+  border-bottom-left-radius: $size-30 !important;
+  border-bottom-right-radius: $size-30 !important;
+  border: $size-no-0 !important;
+  margin: $size-no-0 $auto !important;
+  padding-top: $percent-10;
+  z-index: $size-no-1;
+  content: "";
+  height: $size-210 !important;
+  left: $size-no-0;
+  position: $absolute;
+  right: $size-no-0;
+  top: $size-no-0 !important;
+  width: $percent-100;
+
+  @media screen and (max-width: 360px) {
+    height: $size-195 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    height: $size-220 !important;
+  }
+}
+
+.bg-header-informasi .form-container {
+  background-color: $red !important;
+  background-size: $cover;
+  background-repeat: $norepeat;
+  background-position: $center $center;
+  border-bottom-left-radius: $size-30 !important;
+  border-bottom-right-radius: $size-30 !important;
+  border: $size-no-0 !important;
+  margin: $size-no-0 $auto !important;
+  content: "";
+  height: $size-210;
+  left: $size-no-0;
+  position: $relative;
+  right: $size-no-0;
+  top: $size-no-0 !important;
+  width: $percent-100;
+  z-index: $size-no-1;
+
+  @media screen and (max-width: 360px) {
+    height: $size-180 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    height: $size-220 !important;
+  }
+}
+
+.bg-header .form-container {
+  background: $transparent !important;
+  border: $size-no-0 !important;
+  margin: $size-no-0 $auto !important;
+  position: $relative;
+  top: $size-0;
+  width: $percent-100;
+  z-index: $size-no-1;
+}
+
+.bg-headers .form-container {
+  background: $transparent !important;
+  border: $size-no-0 !important;
+  margin: $size-no-0 $auto !important;
+  position: $relative;
+  top: $size-0;
+  width: $percent-100;
+  z-index: $size-no-1;
+}
+
+.bg-head .form-container-profil {
+  position: $relative;
+  z-index: $size-no-1;
+  top: $size-0;
+  background: $transparent !important;
+  padding: $size-0;
+  padding-top: $percent-2-5;
+  width: $percent-100;
+  margin: $size-0 !important;
+  border: $size-no-0 !important;
+}
+
+.bgimg-1 {
+  background-image: $background;
+  background-size: $percent-100 $percent-100;
+  background-repeat: $norepeat;
+  color: $white;
+  position: $fixed;
+  width: $percent-100;
+}
+
+.blue {
+  $background-color: $blue;
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.border-radius-5 {
+  border-radius: $size-5 !important;
+}
+
+.ionic_datepicker_popup .popup-buttons .button_close {
+  padding: $size-5 !important;
+  background: $white;
+  background-color: $blue !important;
+  font-weight: $bold !important;
+}
+
+button.button.button-block.button_close.ng-binding {
+  background-color: $blue !important;
+  color: $white !important;
+  padding: $size-0 !important;
+  margin: $size-0 !important;
+  font-size: $size-17 !important;
+  font-weight: $bold !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+  }
+}
+
+button.button.button-block.button_set.ng-binding {
+  background-color: $red !important;
+  color: $white !important;
+  padding: $size-0 !important;
+  margin: $size-0 !important;
+  font-size: $size-17 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+  }
+}
+
+.button-costum-first {
+  background-color: $red !important;
+  background-size: $percent-100 $percent-100 !important;
+  border: $size-0 !important;
+  box-shadow: $box-shadow;
+  color: $white !important;
+  padding-bottom: $size-10 !important;
+  padding-top: $size-10 !important;
+  width: $percent-100 !important;
+  -webkit-background-size: $cover !important;
+  -moz-background-size: $cover !important;
+}
+
+.button-costum-first-permohonan {
+  background-color: $red !important;
+  background-size: $percent-100 $percent-100 !important;
+  border: $size-0 !important;
+  box-shadow: $box-shadow;
+  color: $white !important;
+  margin: $size-8 !important;
+  padding-bottom: $size-10 !important;
+  padding-top: $size-10 !important;
+  width: $percent-100 !important;
+  -webkit-background-size: $cover !important;
+  -moz-background-size: $cover !important;
+}
+
+.button-costum-edit {
+  background-color: $blue !important;
+  background-size: $percent-100 $percent-100;
+  border: $size-0 !important;
+  box-shadow: $box-shadow;
+  color: $white;
+  padding-bottom: $size-10 !important;
+  padding-top: $size-10 !important;
+  width: $percent-100;
+  -webkit-background-size: $cover;
+  -moz-background-size: $cover;
+}
+
+.button-costum-notif {
+  width: $percent-100;
+  -webkit-background-size: $cover;
+  -moz-background-size: $cover;
+  background-size: $percent-100 $percent-100;
+  color: $white;
+  padding-top: $size-10 !important;
+  padding-bottom: $size-10 !important;
+  background-color: $red !important;
+  border: $size-0 !important;
+}
+
+.button-daftar {
+  background-color: $red;
+  border: $size-0;
+  border-radius: $size-10;
+  box-shadow: $box-shadow;
+  color: $white;
+  font-weight: $bold;
+  padding-bottom: $size-10;
+  padding-top: $size-10;
+}
+
+.button-daftar:hover {
+  background-color: $red;
+  background-position: $right-center;
+  box-shadow: $box-shadow;
+  color: $white;
+}
+
+.button-detail {
+  background-color: $white !important;
+  color: $red !important;
+  border: $size-1 $solid $red !important;
+  border-radius: $size-5 !important;
+  margin-bottom: $size-0 !important;
+  padding: $size-2 !important;
+  font-size: $size-14 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-12 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-16 !important;
+  }
+}
+
+.button-icon {
+  color: $white !important;
+  font-size: $size-18 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-20 !important;
+  }
+}
+
+.button-icon-profil {
+  color: $white;
+  background-color: $transparent;
+  margin-top: $size-5;
+  margin-bottom: $size-15;
+  padding-bottom: $size-0 !important;
+}
+
+.button-login {
+  background-color: $red;
+  border: $size-0;
+  border-radius: $size-10;
+  box-shadow: $box-shadow;
+  color: $white;
+  font-weight: $bold;
+  padding-bottom: $size-7;
+  padding-top: $size-7;
+}
+
+.button-login:hover {
+  background-color: $red;
+  background-position: $right-center;
+  color: $white;
+}
+
+.btn-close {
+  border: $size-0 !important;
+  margin-bottom: $size-5 !important;
+  background-color: $red !important;
+  padding-top: $size-10 !important;
+  padding-bottom: $size-10 !important;
+  box-shadow: $box-shadow;
+}
+
+.btn-maps {
+  top: $size-no-0 !important;
+  padding: $size-0 !important;
+  position: $relative !important;
+  font-size: $size-16 !important;
+  font-weight: 600;
+  display: $inline-block;
+  transition: all .2s ease-in-out;
+  cursor: $pointer;
+  /* margin-right: 6px; */
+  overflow: $hidden !important;
+  border: $size-no-0 !important;
+  background-color: $red !important;
+  color: $white !important;
+  margin: $size-10 !important;
+}
+
+.font-button {
+  font-size: $size-18 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-16 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-20 !important;
+  }
+}
+
+.font-jadwal {
+  font-size: $size-14 !important;
+  text-align: $left !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-12 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-16 !important;
+  }
+}
+
+.button-menu {
+  align-items: $center;
+  border: $size-0;
+  border-radius: $size-10 !important;
+  font-size: $size-42;
+  margin: $percent-4 !important;
+  margin-top: $percent-2 !important;
+  padding-top: $percent-5 !important;
+  padding-bottom: $percent-5 !important;
+
+  @media screen and (max-width: $size-360) {
+    padding-top: $percent-5 !important;
+    padding-bottom: $percent-5 !important;
+    font-size: $size-30;
+  }
+}
+
+.button-menu.profil {
+  align-items: $center;
+  border: $size-0;
+  border-radius: $size-10 !important;
+  font-size: $size-50;
+  margin: $percent-4 !important;
+  margin-top: $percent-2 !important;
+  padding: $size-0 !important;
+  padding-bottom: $size-0 !important;
+  width: $percent-100;
+}
+
+.button-menu-profil {
+  border: $size-0;
+  border-radius: $size-10 !important;
+  color: $red;
+  font-size: $size-50;
+  margin: $percent-4 !important;
+  padding: $size-0 !important;
+}
+
+.button-menu-text {
+  font-size: $percent-30 !important;
+  padding-top: $size-5 !important;
+}
+
+.button-menu-text-profil {
+  color: $grey;
+  font-size: $percent-30 !important;
+  font-weight: $bold !important;
+  margin: $size-0 !important;
+  padding-left: $size-20 !important;
+  padding-top: $size-25 !important;
+  width: $percent-100 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $percent-25 !important;
+    padding-left: $size-30 !important;
+    padding-top: $size-30 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $percent-35 !important;
+    padding-left: $size-25 !important;
+    padding-top: $size-27 !important;
+  }
+}
+
+.button-menu-text-subprofil {
+  font-size: $percent-30 !important;
+  font-weight: $bold !important;
+  margin: $size-0 !important;
+  padding-left: $size-20 !important;
+  padding-top: $size-0 !important;
+  width: $percent-100 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $percent-25 !important;
+    padding-left: $size-30 !important;
+    padding-top: $size-2 !important;
+    padding-bottom: $size-2 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $percent-35 !important;
+    padding-left: $size-25 !important;
+    padding-top: $size-2 !important;
+    padding-bottom: $size-2 !important;
+  }
+}
+
+.button-menu-text-subprofil2 {
+  color: $grey;
+  font-size: $percent-30 !important;
+  margin: $size-0 !important;
+  padding-left: $size-20 !important;
+  padding-top: $size-0 !important;
+  width: $percent-100 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $percent-25 !important;
+    padding-left: $size-30 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $percent-35 !important;
+    padding-left: $size-25 !important;
+    padding-top: $size-2 !important;
+    padding-bottom: $size-2 !important;
+  }
+}
+
+.button-menu-text-header {
+  font-size: $percent-100 !important;
+  font-weight: $bold !important;
+}
+
+.button-menu-text-header-profil {
+  color: $red;
+  font-size: $percent-120 !important;
+  font-weight: $bold !important;
+  padding-bottom: $size-10 !important;
+}
+
+.button-menu-text-subheader {
+  font-size: $percent-80 !important;
+  font-weight: $bold !important;
+  margin-bottom: $size-10 !important;
+}
+
+.button-modal {
+  padding: $size-0 !important;
+  margin: $size-0 !important;
+  border: $size-no-0 !important;
+  background: $transparent !important;
+  text-align: $left !important;
+  width: $percent-100 !important;
+}
+
+.card-margin-pendaftaran {
+  @include margin($size-50 $size-7 $size-7 $size-7);
+}
+
+.card-margin-hotel-pendaftaran {
+  @include margin($size-7 $size-7 $size-7 $size-7);
+}
+
+.card-margin-profil {
+  @include margin($size-7 $size-7 $size-7 $size-7);
+}
+
+.card-margin-kritik {
+  @include margin($size-0 $size-7 $size-7 $size-7);
+}
+
+.center {
+  text-align: $center;
+}
+
+.content-fitur-align {
+  padding-top: $percent-12 !important;
+  text-align: $center;
+  vertical-align: $middle;
+  float: $center;
+}
+
+.content-home-align {
+  margin: $auto;
+  padding-top: $size-0 !important;
+  text-align: $center;
+  vertical-align: $middle;
+  width: $percent-100;
+}
+
+.content-home-lapor-align {
+  margin: $auto;
+  margin-top: $percent-25;
+  width: $percent-100;
+  padding-top: $size-0 !important;
+  text-align: $center;
+  vertical-align: $middle;
+}
+
+.content.content-inbox-align {
+  padding-top: $percent-50 !important;
+  text-align: $center;
+  vertical-align: $middle;
+  float: $center;
+}
+
+.content {
+  padding-top: $percent-0 !important;
+}
+
+.font-size-100 {
+  font-size: $percent-100;
+}
+
+.font-size-80px {
+  font-size: $size-50;
+}
+
+.footer {
+  position: $fixed;
+  right: $size-no-0;
+  bottom: $size-no-0;
+  left: $size-no-0;
+  text-align: $center;
+}
+
+.footer-greet {
+  color: $white;
+  margin: $auto;
+  padding: $size-10;
+  font-size: $percent-100;
+  vertical-align: $middle;
+}
+
+.forget-password {
+  float: $center;
+  padding-top: $percent-20;
+}
+
+.foto-profil {
+  border-radius: $size-em-100;
+  width: $size-140;
+  height: $size-140;
+  text-align: $center;
+  padding: $size-0 !important;
+}
+
+.foto-profil-sidemenu {
+  border-radius: $size-em-100;
+  width: $size-140;
+  height: $size-140;
+  text-align: $center;
+  margin-top: $size-10 !important;
+  margin-bottom: $size-0 !important;
+  padding: $size-0 !important;
+}
+
+.head-title {
+  font-size: $size-16;
+  text-transform: uppercase;
+  font-weight: $bold;
+  margin-bottom: $size-0;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14;
+    margin-bottom: $size-0;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18;
+    margin-bottom: $size-0;
+  }
+}
+
+.header-background {
+  border: $none !important;
+  border-width: $size-0;
+  background-color: $red;
+  font-size: $size-18;
+  color: $white;
+}
+
+.header-color {
+  background: $red !important;
+}
+
+.header-text {
+  padding-top: $size-20;
+  padding-bottom: $size-20;
+  text-align: $center;
+  font-weight: $bold;
+  font-size: $percent-85 !important;
+  color: $white !important;
+  padding-left: $size-10;
+  padding-right: $size-10;
+  line-height: $size-mm-7
+}
+
+.icon-jadwal {
+  z-index: $size-no-100 !important;
+  color: $grey !important;
+  font-size: $percent-100 !important;
+  position: $absolute !important;
+  text-align: $right !important;
+  right: $percent-1 !important;
+  bottom: $percent-40 !important;
+  margin-right: $size-5 !important;
+
+  @media screen and (max-width: 360px) {
+    bottom: $percent-40 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    bottom: $percent-40 !important;
+  }
+}
+
+label.item.item-input {
+  margin: $size-no-0 !important;
+  border-radius: $size-5 !important;
+  width: $percent-100 !important;
+  background-color: $white !important;
+  box-shadow: $size-no-0 $size-no-0 $size-8 $size-no-0 rgba(0, 0, 0, .12);
+  display: $flex !important;
+  flex-wrap: $wrap !important;
+  align-items: flex-start;
+  max-height: $size-100 !important;
+  z-index: $size-no-100 !important;
+  margin-bottom: $size-0 !important;
+  margin-left: $size-13 !important;
+  margin-right: $size-13 !important;
+  margin-top: $size-0 !important;
+  padding-bottom: $size-5 !important;
+  padding-top: $size-5 !important;
+}
+
+.ionic_datepicker_modal .month_select,
+.ionic_datepicker_modal .year_select {
+  border-bottom: $size-1 $solid $red !important;
+  margin-left: $size-0 !important;
+  margin-right: $size-0 !important;
+}
+
+.pendaftaran-card {
+  margin-top: $size-15 !important;
+}
+
+.platform-ios .ionic_datepicker_modal select {
+  left: $percent-1 !important;
+}
+
+.platform-android .ionic_datepicker_modal select {
+  left: $percent-1 !important;
+}
+
+.ionic_datepicker_popup .popup-body .month_select select,
+.ionic_datepicker_popup .popup-body .year_select select {
+  left: $size-5 !important;
+  border: $none !important;
+  padding: $size-no-0 !important;
+}
+
+row.select_selection {
+  padding: $size-0 !important;
+}
+
+.ionic_datepicker_popup .popup-body .select_section {
+  padding: $size-0 !important;
+}
+
+.ionic_datepicker_popup .calendar_grid {
+  margin: $size-20 !important;
+
+  @media screen and (max-width: 360px) {
+    margin: $size-0 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    margin: $size-30 !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+}
+
+.item-select select {
+  -webkit-appearance: $none !important;
+  -moz-appearance: $none !important;
+  appearance: $none !important;
+  position: $absolute !important;
+  top: $size-no-0 !important;
+  bottom: $size-no-0 !important;
+  right: $size-no-0 !important;
+  padding: 0 0px 0 16px !important;
+  max-width: 100% !important;
+  border: none !important;
+  background: $white !important;
+  color: #333 !important;
+  /* text-indent: .01px; */
+  text-overflow: '' !important;
+  white-space: nowrap !important;
+  font-size: $size-14 !important;
+  cursor: pointer !important;
+  direction: rtl !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-12 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-16 !important;
+  }
+}
+
+.icon-bottom-right {
+  position: $absolute;
+  top: $percent-70;
+  bottom: $size-0 !important;
+  right: $percent-7;
+  color: $white;
+}
+
+.icon-mrz {
+  height: $size-40;
+  width: $size-50;
+  margin-top: $size-5;
+  margin-bottom: $size-5;
+}
+
+.img-responsive {
+  height: $size-90;
+  width: $size-170;
+}
+
+.img-size-50 {
+  height: $size-50;
+  width: $size-50;
+}
+
+.img-logo {
+  height: $size-30;
+  width: $size-70;
+  margin-top: $size-20;
+}
+
+.img-user {
+  border-radius: $size-em-100;
+  height: $size-80;
+  margin: $size-10;
+  margin-top: $size-15;
+  margin-bottom: $size-0 !important;
+  width: $size-80;
+
+  @media screen and (max-width: 360px) {
+    height: $size-80;
+    margin: $size-10;
+    margin-top: $size-15;
+    margin-bottom: $size-0 !important;
+    width: $size-80;
+  }
+
+  @media screen and (min-width: 400px) {
+    height: $size-100;
+    margin: $size-10;
+    margin-top: $size-15;
+    margin-bottom: $size-0 !important;
+    width: $size-100;
+  }
+}
+
+.img-user-profil {
+  height: $size-120;
+  width: $size-120;
+  z-index: $size-no-100 !important;
+}
+
+.imigrasi-logo {
+  height: $size-50;
+  width: $size-120;
+  margin-top: $size-20;
+  margin-bottom: $size-20;
+}
+
+.inbox-text {
+  font-size: $percent-80;
+  text-align: $center;
+}
+
+.inbox-text-header {
+  font-size: $percent-80;
+  font-weight: $bold;
+  text-align: $center;
+}
+
+.input-costum {
+  border-radius: $size-10;
+  font-size: $size-16 !important;
+  opacity: $size-no-1;
+  padding-left: $size-10 !important;
+  padding-top: $size-0 !important;
+  width: $percent-100;
+}
+
+input[type="email"].input-costum-profil,
+input[type="number"].input-costum-profil,
+input[type="text"].input-costum-profil,
+input[type="password"].input-costum-profil,
+input[type="text"].input-costum-area {
+  background-color: $white !important;
+  border: $size-1 $solid !important;
+  border-color: $grey !important;
+  border-width: $size-1 !important;
+  font-size: $size-16 !important;
+  height: $size-40 !important;
+  margin-left: $percent-4 !important;
+  margin-right: $percent-4 !important;
+  margin-bottom: $size-15 !important;
+  padding-left: $size-10 !important;
+  padding-top: $size-0 !important;
+  width: $percent-92 !important;
+}
+
+input[type="radio"].input-costum-profil {
+  border-color: $red !important;
+  margin-left: $percent-4 !important;
+  margin-bottom: $size-10 !important;
+  height: $size-15 !important;
+  width: $size-15 !important;
+
+  @media screen and (max-width: 360px) {
+    margin-left: $percent-4 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    margin-left: $percent-3 !important;
+  }
+}
+
+.no-padding-row {
+  margin: $size-13 !important;
+  margin-right: $size-0 !important;
+  width: $percent-95-7 !important;
+  padding: $size-0 !important;
+  margin-top: $size-10 !important;
+
+  @media screen and (max-width: 360px) {
+    margin: $size-12 !important;
+    font-size: $size-14 !important;
+    text-align: $center !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    margin: $size-14 !important;
+    font-size: $size-16 !important;
+    text-align: $center !important;
+  }
+}
+
+input[type="text"].input-costum-profil-tanggal {
+  background-color: $white !important;
+  border: $size-1 $solid !important;
+  border-color: $grey !important;
+  border-width: $size-1 !important;
+  font-size: $size-16 !important;
+  height: $size-40 !important;
+  margin-left: $percent-4 !important;
+  margin-right: $percent-4 !important;
+  padding-left: $size-10 !important;
+  padding-top: $size-0 !important;
+  width: $percent-92 !important;
+}
+
+.select-gender-permohonan,
+input[type="number"].input-costum-permohonan,
+input[type="text"].input-costum-permohonan,
+input[type="password"].input-costum-password {
+  background-color: $white !important;
+  border: $size-1 $solid !important;
+  border-color: $grey !important;
+  border-width: $size-1 !important;
+  font-size: $size-16 !important;
+  height: $size-40 !important;
+  margin-right: $percent-4 !important;
+  margin-bottom: $size-15 !important;
+  padding-left: $size-10 !important;
+  padding-top: $size-0 !important;
+  width: $percent-100 !important;
+}
+
+input[type="search"] {
+  border: $size-1 $solid !important;
+  border-color: $red !important;
+  border-radius: $size-10 !important;
+  height: $size-24 !important;
+  padding-top: $size-0 !important;
+}
+
+.input-forget-password {
+  background-size: $percent-100 $percent-100 !important;
+  border: $size-1 $solid $red !important;
+  border-radius: $size-10 !important;
+  color: $black !important;
+  font-size: $size-16 !important;
+  height: $size-40 !important;
+  padding-left: $size-15 !important;
+  padding-top: $size-0 !important;
+  width: $percent-100 !important;
+  -webkit-background-size: $cover;
+  -moz-background-size: $cover;
+}
+
+input[type="date"].input-costum-profil {
+  background-color: $white !important;
+  border: $size-1 $solid !important;
+  border-color: $red !important;
+  border-width: $size-1 !important;
+  font-size: $size-16 !important;
+  height: $size-40 !important;
+  margin-left: $percent-4 !important;
+  margin-right: $percent-4 !important;
+  margin-bottom: $size-15 !important;
+  padding-left: $size-5 !important;
+  padding-top: $size-0 !important;
+  width: $percent-92 !important;
+}
+
+.item-icon-left {
+  font-size: $size-20 !important;
+  background-color: $red !important;
+  color: $white !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-20 !important;
+  }
+}
+
+.item-input {
+  // padding: $size-2 $size-0 $size-3 $size-16;
+  // z-index: $size-minus-10;
+  border-radius: $size-5;
+  margin-top: -25px;
+  width: $percent-95;
+  background-color: $white;
+  box-shadow: $size-no-0 $size-no-0 $size-8 $size-no-0 rgba(0, 0, 0, .12);
+  display: $flex;
+  flex-wrap: $wrap;
+  align-items: flex-start;
+  padding: $size-5;
+  max-height: $size-50;
+  z-index: $size-no-100;
+  margin-bottom: $size-15;
+
+  @media screen and (max-width: 360px) {
+    margin-top: -25px !important;
+    margin-bottom: $size-0 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    margin-top: -25px !important;
+    margin-bottom: $size-20 !important;
+  }
+}
+
+.item-input-wrapper {
+  padding-left: $size-0 !important;
+  padding-right: $size-0 !important;
+}
+
+.select-gender {
+  background-color: $white !important;
+  border: $size-1 $solid !important;
+  border-color: $grey !important;
+  border-width: $size-1 !important;
+  font-size: $size-16 !important;
+  height: $size-40 !important;
+  margin-left: $percent-4 !important;
+  margin-right: $percent-4 !important;
+  margin-bottom: $size-15 !important;
+  padding-left: $size-5 !important;
+  padding-top: $size-0 !important;
+  width: $percent-92 !important;
+}
+
+select:required:invalid:disabled {
+  color: $grey !important;
+}
+
+ion-modal-view.ionic_datepicker_modal.modal.slide-in-up.ng-enter.active.ng-enter-active {
+  display: $block !important;
+  position: $absolute !important;
+  top: $size-no-0;
+  z-index: $size-no-10;
+  margin: $size-no-0 !important;
+  overflow: $hidden !important;
+  min-height: $percent-100 !important;
+  width: $percent-100 !important;
+  background-color: $white !important;
+
+  @media screen and (max-width: 360px) {
+    display: $block !important;
+    position: $absolute !important;
+    top: $size-no-0;
+    z-index: $size-no-10;
+    margin: $size-no-0 !important;
+    overflow: $hidden !important;
+    min-height: $percent-100 !important;
+    width: $percent-100 !important;
+    background-color: $white !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    display: $block !important;
+    position: $absolute !important;
+    top: $size-no-0;
+    z-index: $size-no-10;
+    margin: $size-no-0 !important;
+    overflow: $hidden !important;
+    min-height: $percent-100 !important;
+    width: $percent-100 !important;
+    background-color: $white !important;
+  }
+}
+
+button.swal2-cancel.swal2-styled {
+  background-color: $blue !important;
+  width: $percent-100 !important;
+  padding-top: $size-10 !important;
+}
+
+input[type="file"].input-costum-profil {
+  background-color: $white !important;
+  border: $size-1 $solid !important;
+  border-color: $red !important;
+  border-width: $size-1 !important;
+  font-size: $size-16 !important;
+  height: $size-42 !important;
+  margin-left: $size-0 !important;
+  margin-right: $size-0 !important;
+  padding-left: $size-0 !important;
+  padding-top: $size-0 !important;
+  width: $percent-97-3 !important;
+}
+
+ion-side-menu {
+  background: $red !important;
+}
+
+.ion-ios-search:before {
+  font-size: $size-30 !important;
+}
+
+.ionic-select-modal {
+  background-color: $white !important;
+  display: $block !important;
+  height: $percent-80 !important;
+  margin: $percent-5 !important;
+  margin-top: $percent-20 !important;
+  min-height: $percent-80 !important;
+  overflow: $hidden !important;
+  position: $absolute !important;
+  top: $size-no-10 !important;
+  width: $percent-90 !important;
+  z-index: $size-no-10 !important;
+}
+
+.jadwal-content {
+  font-size: $size-16 !important;
+  text-align: left !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+  }
+}
+
+input[type="text"].jadwal-content-detail {
+  height: $size-40 !important;
+  border-radius: $size-10 !important;
+  color: $white !important;
+  background-color: $red !important;
+  font-size: $size-16 !important;
+  text-align: $center !important;
+  font-weight: $bold !important;
+  border: $size-1 $solid !important;
+  border-color: $white !important;
+  padding: $size-0 !important;
+  margin-bottom: $size-10 !important;
+  width: $percent-90 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+  }
+}
+
+.judul-jadwal-first {
+  border-left: $size-no-0 !important;
+  border-right: $size-no-0 !important;
+  text-align: $center !important;
+  font-size: $size-18 !important;
+  background-color: $red !important;
+  color: $white !important;
+  margin-top: $size-16 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-16 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-20 !important;
+  }
+}
+
+.judul-jadwal {
+  text-align: $center !important;
+  font-size: $size-16 !important;
+  background-color: $light-grey !important;
+  color: $black !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+  }
+}
+
+.jumlah-kuota-teks {
+  font-size: $size-18 !important;
+  text-align: $center !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-16 !important;
+    text-align: $center !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-20 !important;
+    text-align: $center !important;
+  }
+}
+
+div.modal-backdrop.active {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  top: $size-no-10 !important;
+}
+
+.kode-booking-text {
+  font-weight: $bold;
+  font-size: $size-16;
+  text-align: $center;
+  margin-bottom: $size-5;
+  margin-top: $size-15;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+    text-align: $center !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+    text-align: $center !important;
+  }
+}
+
+label {
+  font-weight: $bold !important;
+  font-style: $italic !important;
+  font-size: $percent-100 !important;
+  margin-bottom: $size-5 !important;
+  margin-left: $size-13 !important;
+  margin-right: $size-13 !important;
+  margin-top: $size-0 !important;
+  padding-top: $size-10 !important;
+  text-align: $left !important;
+}
+
+.label-password {
+  font-weight: $bold !important;
+  font-style: $italic !important;
+  font-size: $percent-100 !important;
+  margin-bottom: $size-5 !important;
+  margin-left: $size-0 !important;
+  margin-right: $size-0 !important;
+  margin-top: $size-0 !important;
+  padding-top: $size-10 !important;
+  text-align: $left !important;
+  color: $black !important;
+}
+
+.label-permohonan-area {
+  color: $black !important;
+  font-weight: $bold !important;
+  font-style: $italic !important;
+  font-size: $percent-140 !important;
+  margin-bottom: $size-5 !important;
+  margin-left: $size-0 !important;
+  margin-right: $size-0 !important;
+  margin-top: $size-0 !important;
+  padding-top: $size-10 !important;
+  text-align: $left !important;
+}
+
+.label-costum {
+  font-weight: $bold !important;
+  font-style: $italic !important;
+  font-size: $size-16 !important;
+  margin-bottom: $size-0 !important;
+  margin-left: $size-5 !important;
+  padding-top: $size-10 !important;
+  text-align: $left !important;
+}
+
+.label-aplikasi {
+  color: $yellow;
+  display: $block;
+  font-size: $size-18;
+  font-weight: $bold;
+  font-style: $italic;
+  text-align: $center;
+  width: $percent-100;
+  margin-bottom: $size-10;
+}
+
+.label-distance {
+  color: $white !important;
+  background: $blue !important;
+  padding-top: $size-5 !important;
+  padding-bottom: $size-5 !important;
+  border-radius: $size-10 !important;
+  font-size: $percent-100 !important;
+  margin-left: $size-0 !important;
+  margin-right: $size-0 !important;
+  margin-bottom: $size-0 !important;
+  margin-top: $size-0 !important;
+}
+
+.label-text {
+  color: $yellow;
+  display: $block;
+  font-size: $size-16;
+  font-weight: $bold;
+  text-align: $center;
+  width: $percent-100;
+}
+
+.label-subtext {
+  color: $yellow;
+  display: $block;
+  font-size: $percent-65;
+  font-weight: $bold;
+  text-align: $center;
+  width: $percent-100;
+  margin-bottom: $size-10;
+}
+
+.left {
+  text-align: $left;
+}
+
+.logo-imigrasi {
+  height: $size-80;
+  width: $size-170;
+}
+
+.logo-login {
+  height: $size-90;
+  width: $size-170;
+}
+
+.logo-splash {
+  height: $percent-10 !important;
+  width: $percent-100 !important;
+}
+
+.margin-button {
+  margin: 9px !important;
+  margin-top: 0px !important
+}
+
+.margin-btn {
+  margin-top: 0px !important
+}
+
+.margin-btn.margin-button-left {
+  margin-left: 9px !important;
+}
+
+.margin-btn.margin-button-right {
+  margin-right: 9px !important;
+}
+
+.map-esri {
+  margin: $size-10 !important;
+  margin-bottom: $size-0 !important;
+  max-height: 360px !important;
+  z-index: $size-minus-10 !important;
+  marker-start: $none !important;
+  border-left-style: dotted !important;
+  marker-start: unset !important;
+  marker-start: unset !important;
+  marker-start: unset !important;
+  marker-start: unset !important;
+  marker-start: unset !important;
+}
+
+.margin-no-kanim {
+  margin: $size-20 !important;
+  font-size: $size-16 !important;
+  text-align: $center !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+  }
+}
+
+.maps-address-title {
+  font-weight: bold;
+  color: #D11418;
+  margin-top: 0
+}
+
+.margin-4 {
+  margin: $percent-5 !important;
+  padding: $size-10 !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: $size-0 !important;
+  padding-bottom: $size-0 !important;
+}
+
+.margin-bottom-5 {
+  margin-bottom: $size-5;
+}
+
+.margin-bottom-10 {
+  margin-bottom: $size-10;
+}
+
+.margin-bottom-20 {
+  margin-bottom: $size-20;
+}
+
+.margin-top-0 {
+  margin-top: $size-0 !important;
+}
+
+.margin-top-10 {
+  margin-top: $size-10 !important;
+}
+
+.margin-top-content-10 {
+  margin-top: $size-25 !important;
+}
+
+.margin-top-20 {
+  padding-top: $percent-10 !important;
+}
+
+.margin-top-percent-1 {
+  padding-top: $percent-1 !important;
+}
+
+.margin-top-percent-5 {
+  padding-top: $percent-5 !important;
+}
+
+.margin-top-percent-10 {
+  padding-top: $percent-10 !important;
+}
+
+.margin-top-percent-15 {
+  padding-top: $percent-13 !important;
+
+  @media screen and (max-width: 360px) {
+    padding-top: $percent-15 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    padding-top: $percent-12 !important;
+  }
+}
+
+.menu-color {
+  background: $red !important;
+}
+
+ion-modal-view.modal {
+  display: block;
+  position: $absolute !important;
+  top: $size-no-0;
+  z-index: $size-no-10 !important;
+  overflow: $hidden !important;
+  width: $percent-90 !important;
+  max-height: $percent-70 !important;
+  margin: $percent-5 !important;
+  margin-top: $percent-7 !important;
+  background-color: $white !important;
+
+  @media screen and (max-width: 360px) {
+    max-height: $percent-70 !important;
+    margin-top: $percent-8 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    max-height: $percent-75 !important;
+    min-height: $percent-75 !important;
+    margin-top: $percent-20 !important;
+  }
+}
+
+.modal-backdrop {
+  position: $fixed;
+  top: $size-no-10;
+  right: $size-no-0;
+  bottom: $size-no-0;
+  left: $size-no-0;
+  z-index: $size-no-1040;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.nama-kanim-datepicker {
+  text-align: $center;
+  font-size: $size-16;
+  font-weight: $bold;
+  padding-top: $percent-5;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+  }
+}
+
+.notif-jadwal {
+  font-size: $size-14 !important;
+  text-align: $center !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-12 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-16 !important;
+  }
+}
+
+li.item.item-text-warp.text-pendaftaran {
+  padding: $size-5 !important;
+}
+
+.text-pendaftaran {
+  font-size: $size-14 !important;
+  text-align: $justify !important;
+  margin: $size-0 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-11 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-16 !important;
+  }
+}
+
+.no-padding {
+  padding: $size-no-0 !important;
+  background: $transparent !important;
+  margin: $size-no-0 !important;
+}
+
+option[value=""][disabled] {
+  display: none;
+  color: $grey !important;
+}
+
+option[value=""][selected] {
+  display: none;
+  color: $grey !important;
+}
+
+option {
+  color: $black;
+}
+
+option:not(:first-of-type) {
+  color: $black;
+}
+
+.margin-costum {
+  padding-top: $size-30 !important;
+  text-align: $center !important;
+  font-size: $percent-115 !important;
+  color: $white !important;
+  padding-left: $size-10 !important;
+  padding-right: $size-10 !important;
+}
+
+.margin-costum-guide {
+  padding-bottom: $size-30 !important;
+  padding-top: $size-20 !important;
+  text-align: $center !important;
+  font-size: $percent-130 !important;
+  color: $white !important;
+  padding-left: $size-10 !important;
+  padding-right: $size-10 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $percent-110 !important;
+  }
+}
+
+.lapordiri-margin {
+  padding-bottom: $size-0 !important;
+  padding-top: $size-50 !important;
+  text-align: $center !important;
+  font-size: $percent-115 !important;
+  color: $white !important;
+  padding-left: $size-10 !important;
+  padding-right: $size-10 !important;
+}
+
+.padding-10 {
+  padding: $size-10 !important;
+}
+
+.placeholder-icon {
+  padding: $size-8;
+}
+
+.popup-container .popup {
+  width: $percent-80 !important;
+}
+
+.row-center {
+  float: $center !important;
+  margin: $percent-0-1 !important;
+  text-align: $center !important;
+  align-items: $center !important;
+}
+
+.sidemenu-name {
+  color: $white;
+  font-size: $percent-100;
+  font-weight: $bold;
+  text-align: $center;
+  padding-bottom: $size-20;
+  padding-top: $size-20;
+}
+
+.sign {
+  border-left: $size-1 $solid $white;
+  font-size: $size-50 !important;
+  text-align: $center;
+  padding: $size-20;
+  color: $white
+}
+
+.swal2-actions.select-mrz {
+  flex-direction: $col;
+  padding-bottom: $size-0;
+}
+
+.swal2-popup .swal2-content {
+  font-size: $size-18 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-16 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-20 !important;
+  }
+}
+
+.swal2-popup .swal2-select {
+  background-color: rgb(236, 236, 236);
+  border-radius: $size-5 !important;
+  color: $black !important;
+  font-size: $size-18 !important; // padding: $size-5 $size-0 !important;
+  min-width: $percent-97 !important;
+  max-width: $percent-97 !important;
+  margin-bottom: $size-0 !important;
+  margin-top: $size-5 !important;
+  padding-top: $size-5 !important;
+  text-align: $center !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-16 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-20 !important;
+  }
+}
+
+select.swal2-select {
+  margin-bottom: $size-0 !important
+}
+
+.swal2-popup .swal2-title {
+  color: $black !important;
+  font-size: $size-23 !important;
+  text-align: $center !important;
+  font-weight: 600 !important;
+  text-transform: $none !important;
+  position: $relative !important;
+  margin: $size-no-0 $size-no-0 .4em !important;
+  padding: $size-no-0 !important;
+  display: block !important;
+  word-wrap: break-word !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-18 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-23 !important;
+  }
+}
+
+.sub-title {
+  font-size: $percent-75;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 360px) {
+    margin-top: $size-0;
+    font-size: $percent-60;
+    text-transform: uppercase;
+  }
+
+  @media screen and (min-width: 400px) {
+    margin-top: $size-0;
+    font-size: $percent-85;
+    text-transform: uppercase;
+  }
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+  background-color: $red !important;
+}
+
+.swal2-popup .swal2-styled {
+  background-color: $red !important;
+  border: $size-no-0 !important;
+  border-radius: $size-em-0-25 !important;
+  padding: $size-10 !important;
+  font-size: $size-18 !important;
+  width: $percent-100;
+}
+
+.swal2-popup .select-mrz .swal2-styled.swal2-confirm,
+.swal2-popup .select-mrz .swal2-styled.swal2-cancel {
+  margin-bottom: $size-10;
+  padding: $size-10;
+}
+
+textarea {
+  background-color: $white !important;
+  border: $size-1 $solid !important;
+  border-color: $grey !important;
+  border-width: $size-1 !important;
+  font-size: $size-16 !important;
+  height: $size-40 !important;
+  margin-left: $percent-4 !important;
+  margin-right: $percent-4 !important;
+  margin-bottom: $size-15 !important;
+  padding-left: $size-10 !important;
+  padding-top: $size-5 !important;
+  width: $percent-92 !important;
+}
+
+textarea::placeholder {
+  padding-top: $size-5 !important;
+  width: $percent-96 !important;
+}
+
+textarea #Keterangan {
+  border: $size-1 $solid !important;
+  border-color: $red !important;
+  border-width: $size-1 !important;
+  font-size: $size-16 !important;
+  height: $size-70 !important;
+  margin-left: $size-10 !important;
+  margin-right: $size-10 !important;
+  padding-left: $size-10 !important;
+  padding-top: $size-5 !important;
+  line-height: $size-no-1 !important;
+}
+
+.tab-title {
+  font-size: $size-14 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-12 !important;
+  }
+}
+
+.text-home {
+  color: $white !important;
+  font-size: $percent-120 !important;
+  font-weight: $bold !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $percent-100 !important;
+    font-weight: $bold !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $percent-140 !important;
+    font-weight: $bold !important;
+  }
+}
+
+input[type=radio]:checked+label {
+  color: $red !important;
+  font-style: normal;
+}
+
+.radio-item {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  margin: 10px 10px 0 0;
+}
+
+.radio-item.top {
+  margin: $size-0 0 0;
+}
+
+.radio-item input[type='radio'] {
+  display: none;
+}
+
+.radio-item label {
+  color: #666;
+  font-weight: normal;
+}
+
+.radio-item label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 11px;
+  border: 2px solid $red;
+  background-color: transparent;
+}
+
+.radio-item input[type=radio]:checked+label:after {
+  border-radius: 11px;
+  width: $size-12;
+  height: $size-12;
+  position: absolute;
+  top: 9px;
+  left: $size-20;
+  content: " ";
+  display: block;
+  background: $red;
+}
+
+.right-teks {
+  font-size: $size-14;
+  color: $black;
+  text-align: $right;
+  width: $percent-100;
+  padding-top: $size-0 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-12;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-16;
+  }
+}
+
+.teks-hr {
+  font-size: $size-16;
+  color: $black;
+  text-align: $center;
+  padding-top: $size-0 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18;
+  }
+}
+
+.teks {
+  font-size: $size-16;
+  color: $black;
+  text-align: $left;
+  padding-top: $size-0 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18;
+  }
+}
+
+.text-info-jadwal {
+  font-size: $size-16 !important;
+  text-align: $center !important;
+  font-weight: $bold !important;
+  margin-bottom: $size-5 !important;
+  margin-top: $size-5 !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+  }
+}
+
+.text-left {
+  float: $left;
+  font-size: $percent-82;
+  margin-left: $size-0;
+  padding-left: $size-0;
+}
+
+.text-right {
+  float: $right;
+  font-size: $percent-82;
+  margin-right: $size-0;
+  padding-right: $size-0;
+}
+
+.text-white {
+  color: $white;
+}
+
+.title {
+  font-size: $size-18 !important;
+  font-weight: $bold !important;
+  text-align: $center !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-20 !important;
+  }
+}
+
+.title.content {
+  padding-top: $percent-10 !important;
+  font-size: $size-16 !important;
+  font-weight: $bold !important;
+  text-align: $center !important;
+
+  @media screen and (max-width: 360px) {
+    font-size: $size-14 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: $size-18 !important;
+  }
+}
+
+.vertical-align-0 {
+  margin: $auto;
+  padding-top: $percent-0;
+  text-align: $center;
+  width: $percent-100;
+}
+
+.vertical-align-40 {
+  margin: $auto;
+  padding-top: $percent-40;
+  text-align: $center;
+  width: $percent-100;
+}
+
+.vertical-align-50 {
+  margin: $auto;
+  padding-top: $percent-50;
+  text-align: $center;
+  width: $percent-100;
+}
+
+.view-foto {
+  border-radius: $size-em-100;
+  width: $size-140;
+  height: $size-140;
+  text-align: $center;
+  padding: $size-0 !important;
+  margin-bottom: $size-5;
+  margin-top: $percent-5 !important;
+
+  @media screen and (max-width: 360px) {
+    width: $size-120 !important;
+    height: $size-120 !important;
+  }
+
+  @media screen and (min-width: 400px) {
+    width: $size-150 !important;
+    height: $size-150 !important;
+  }
+}
+
+.view-foto-profil {
+  border-radius: $size-em-100;
+  width: $size-140;
+  height: $size-140;
+  text-align: $center;
+  padding: $size-0 !important;
+  margin-top: $percent-5 !important;
+
+  @media screen and (max-width: 360px) {
+    width: $size-100;
+    height: $size-100;
+  }
+
+  @media screen and (min-width: 400px) {
+    width: $size-150;
+    height: $size-150;
+  }
+}
+
+.white {
+  color: $white !important;
+}
+
+.white:hover {
+  color: $white;
+}

@@ -1,0 +1,68 @@
+<ion-view view-title="DAFTAR KANIM" cache-view="false">
+
+  <!-- Header -->
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-navicon" style="color:azure" menu-toggle="left"></button>
+    <div class="h1 title" style="color:azure">DAFTAR KBRI</div>
+  </div>
+  <!-- End Header -->
+
+  <ion-content scroll="true">
+    <div scroll="false" id="scroll-list-target" class="map-esri margin-top-percent-15">
+      <!-- Wizzard Form -->
+      <ul class="progress-indicator">
+        <li class="completed">
+          <span class="bubble"></span>
+          <div style="padding-top: 0px !Important;font-size: 14px !Important">Langkah 1</div>
+        </li>
+        <li>
+          <span class="bubble"></span>
+          <div style="padding-top: 0px !Important;font-size: 14px !Important">Langkah 2</div>
+        </li>
+        <li>
+          <span class="bubble"></span>
+          <div style="padding-top: 0px !Important;font-size: 14px !Important">Langkah 3</div>
+        </li>
+      </ul>
+      <esri-map id="esriMap" center="map.center" class="maps" zoom="map.zoom" basemap="streets" load="mapLoaded"></esri-map>
+      <center>
+        <div class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="Pencarian" ng-model="searchValue" ng-init="searchValue = ''" class="search">
+        </div>
+      </center>
+    </div>
+
+    <ion-scroll direction="y" id="scroll-list" style="max-height:100%;">
+      <div ng-if="map.Offices.length == 0" class="card border-radius-5 margin-bottom-5 margin-top-10">
+        <div class="margin-no-kanim">
+          Mohon maaf untuk saat ini belum ada kantor yang aktif di lokasi anda
+        </div>
+      </div>
+      <div class="list animated slideInUp" ng-repeat="listkanim in map.Offices | orderBy: 'attributes.Jarak * 1'" custom-search="{{searchValue}}"
+        value="{{listkanim.attributes.UNIT_NAME}}" sensitive="false">
+        <div class="card border-radius-5 margin-bottom-5 margin-top-10">
+          <div class="row">
+            <div class="col-30 padding-right-0">
+              <center style="padding: 5px;padding-top:0px">
+                <img src="assets/img/logo-img.png" class="avatar-photo map">
+                <h6 class="label-distance">
+                  {{(listkanim.attributes.Jarak) ? listkanim.attributes.Jarak : 0}} km
+                </h6>
+              </center>
+            </div>
+            <div class="col-xs-9">
+              {{listkanim.attributes.UNIT_NAME}}
+              <br>
+              <h6 class="maps-address-title">Alamat</h6>
+              <h6>{{listkanim.attributes.UNIT_CLASS}}&#13;&#10;{{listkanim.attributes.OFFICE_ADDRESS}}&#13;&#10;{{listkanim.attributes.MO_TELP}}</h6>
+            </div>
+          </div>
+          <div class="row">
+            <a class="button btn-maps col" ng-click="getQuotaAvail(listkanim.attributes.ID, listkanim.attributes)">PILIH KANTOR</a>
+          </div>
+        </div>
+      </div>
+    </ion-scroll>
+  </ion-content>
+</ion-view>

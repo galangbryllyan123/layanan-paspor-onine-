@@ -1,0 +1,35 @@
+.divGPS {
+    top: 90px;
+    left: 20px;
+    width: 34px;
+    height: 34px;
+    background-image: url("../img/locate.png");
+    z-index: 999;
+    position: absolute;
+}
+
+.divListKanimButton {
+    top: 130px;
+    left: 20px;
+    width: 34px;
+    height: 34px;
+    background-image: url("../img/kanim.png");
+    z-index: 999;
+    position: absolute;
+    visibility: hidden;
+}
+
+.divRouteButton {
+    top: 170px;
+    left: 20px;
+    width: 34px;
+    height: 34px;
+    background-image: url("../img/route.png");
+    z-index: 999;
+    position: absolute;
+    visibility: hidden;
+}
+
+.esriAttributionLastItem{
+ display:none !important;   
+}

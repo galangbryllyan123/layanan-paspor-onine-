@@ -1,0 +1,144 @@
+<script type="text/ng-template" id="permohonanPaspor">
+  <div class="left">
+    <input type="hidden" id="pemohon-id" />
+
+    <!-- NIK -->
+    <label for="NIK" class="label-password">Nomor Induk Kependudukan</label>
+    <input id="NIK" placeholder="Nomor Induk Kependudukan" ng-disabled="formPermohonan.index == '1'" string-to-number class="input-costum-permohonan"
+      type="number" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].APPLICANT_ID" required />
+
+    <!-- Tanggal Lahir -->
+    <label for="TanggalLahir" class="label-password">Tanggal Lahir</label>
+    <input type="text" id="TanggalLahir" placeholder="Tanggal Lahir" class="input-costum-permohonan" ng-disabled="formPermohonan.index == '1'"
+      input-date-picker-ionic="formPermohonan.pemohon[formPermohonan.index - 1].BORN_DATE" format="DD/MM/YYYY" ng-model="tanggalLahir">
+
+    <!-- Agama -->
+    <!-- <label for="agama" class="label-password">Agama
+      <select id="agama" class="select-gender-permohonan" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].AGAMA" required>
+        <option disabled selected value="">Agama</option>
+        <option value="ISLAM">Islam</option>
+        <option value="KRISTEN">Kristen</option>
+        <option value="HINDU">Hindu</option>
+        <option value="BUDHA">Budha</option>
+        <option value="KATHOLIK">Katholik</option>
+        <option value="KONGHUCU">Konghucu</option>
+      </select>
+    </label> -->
+
+    <!-- Nama Lengkap -->
+    <label for="NamaLengkap" class="label-password">Nama Lengkap</label>
+    <input id="NamaLengkap" placeholder="Nama Lengkap" class="input-costum-permohonan"
+      type="text" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].FULL_NAME"/>
+
+    <!-- Jenis Kelamin -->
+    <label for="Gender" class="label-password">Jenis Kelamin
+      <select id="Gender" class="select-gender-permohonan" ng-disabled="formPermohonan.index == '1'" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].GENDER"
+        required>
+        <option disabled selected value="">Jenis Kelamin</option>
+        <option value="M">Laki - laki</option>
+        <option value="F">Perempuan</option>
+      </select>
+    </label>
+
+    <!-- Provinsi -->
+    <button class="button-modal" modal-select="" ng-disabled="formPermohonan.index == '1'" ng-model="modalSelected[formPermohonan.index - 1].Provinsi"
+      options="dataObjProvinsi[formPermohonan.index - 1]" load-list-message="Harap tunggu..." search-placeholder="Pencarian"
+      cancel-search-button="Hapus" reset-button="ATUR ULANG" cancel-button="BATAL" has-search="true" search-properties="['area_name']"
+      modal-title="PILIH PROVINSI">
+      <div class="option">
+        <h2>{{option.area_name}}</h2>
+      </div>
+      <label for="Provinsi" class="label-password">Provinsi</label>
+      <input id="Provinsi" readonly type="text" ng-model="modalSelected[formPermohonan.index - 1].Provinsi.area_name" class="input-costum-permohonan"
+        placeholder="Provinsi" required />
+    </button>
+
+    <!-- Kabupaten / Kota -->
+    <button class="button-modal" modal-select="" ng-disabled="formPermohonan.index == '1' || admin_area_id == undefined" ng-model="modalSelected[formPermohonan.index - 1].Kabupaten" options="dataObjKabupaten[formPermohonan.index - 1]"
+      load-list-message="Harap tunggu..." search-placeholder="Pencarian" cancel-search-button="Hapus" reset-button="ATUR ULANG"
+      cancel-button="BATAL" has-search="true" search-properties="['city_name']" modal-title="PILIH KABUPATEN/KOTA">
+      <div class="option">
+        <h2>{{option.city_name}}</h2>
+      </div>
+      <label for="KabupatenKota" class="label-password">Kabupaten / Kota</label>
+      <input id="KabupatenKota" readonly placeholder="Kabupaten / Kota" class="input-costum-permohonan" type="text" ng-model="modalSelected[formPermohonan.index - 1].Kabupaten.city_name"
+        required>
+    </button>
+
+    <!-- Kecamatan -->
+    <button class="button-modal" ng-disabled="formPermohonan.index == '1' || city_id == undefined" modal-select="" ng-model="modalSelected[formPermohonan.index - 1].Kecamatan"
+      options="dataObjKecamatan[formPermohonan.index - 1]" load-list-message="Harap tunggu..." search-placeholder="Pencarian"
+      cancel-search-button="Hapus" reset-button="ATUR ULANG" cancel-button="BATAL" has-search="true" search-properties="['district_name']"
+      modal-title="PILIH KECAMATAN">
+      <div class="option">
+        <h2>{{option.district_name}}</h2>
+      </div>
+      <label for="Kecamatan" class="label-password">Kecamatan</label>
+      <input id="Kecamatan" readonly placeholder="Kecamatan" class="input-costum-permohonan" type="text" ng-model="modalSelected[formPermohonan.index - 1].Kecamatan.district_name"
+        required>
+    </button>
+
+    <!-- Keterangan -->
+    <label for="Keterangan" class="label-password">Keterangan
+      <select id="Keterangan" ng-disabled="formPermohonan.index == '1'" ng-change="checkIsPribadi(formPermohonan.index, formPermohonan.pemohon[formPermohonan.index - 1].applicant_category)"
+        ng-model="formPermohonan.pemohon[formPermohonan.index - 1].applicant_category" class="select-gender-permohonan" required>
+        <option disabled selected value="">Keterangan</option>
+        <option ng-disabled="!canEditPribadi && opt == 'PRIBADI'" ng-repeat="opt in keterangan">{{opt}}</option>
+      </select>
+    </label>
+
+  </div>
+</script>
+<script type="text/ng-template" id="penggantianPaspor">
+  <div id="DataPaspor-Form" class="left">
+    <input type="hidden" placeholder="Kode Negara" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].NATIONALITY_CODE">
+
+    <!-- Nomor Paspor -->
+    <label for="NomorPaspor" class="label-password">Nomor Paspor</label>
+    <input id="NomorPaspor" placeholder="Nomor Paspor" class="input-costum-permohonan" type="text" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].PASSPORT_NUMBER"
+      required />
+
+    <!-- Jenis Paspor -->
+    <label for="JenisPaspor" class="label-password">Jenis Paspor</label>
+    <input id="JenisPaspor" placeholder="Jenis Paspor" class="input-costum-permohonan" type="text" value="" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].DOC_TYPE"
+      required />
+
+    <!-- Nama Lengkap -->
+    <label for="NamaLengkap" class="label-password">Nama Lengkap</label>
+    <input id="NamaLengkap" placeholder="Nama Lengkap" class="input-costum-permohonan" type="text" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].FULL_NAME"
+      required />
+
+    <!-- Kewarganegaraan -->
+    <label for="Kewarganegaraan" class="label-password">Kewarganegaraan</label>
+    <input id="Kewarganegaraan" placeholder="Kewarganegaraan" value="INDONESIA" class="input-costum-permohonan" type="text" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].NATIONALITY"
+      required />
+
+    <!-- Tanggal Lahir -->
+    <label for="TanggalLahir" class="label-password">Tanggal Lahir</label>
+    <input type="text" id="TanggalLahir" placeholder="Tanggal Lahir" class="input-costum-permohonan" input-date-picker-ionic="formPermohonan.pemohon[formPermohonan.index - 1].BORN_DATE"
+      format="DD/MM/YYYY" ng-model="tanggalLahir">
+
+    <!-- Jenis Kelamin -->
+    <label for="Gender" class="label-password">Jenis Kelamin
+      <select id="Gender" class="select-gender-permohonan" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].GENDER" required>
+        <option disabled selected value="">Jenis Kelamin</option>
+        <option value="M">Laki - laki</option>
+        <option value="F">Perempuan</option>
+      </select>
+    </label>
+
+    <!-- Tanggal Habis Berlaku -->
+    <label for="TanggalBerlaku" class="label-password">Tanggal Habis Berlaku</label>
+    <input type="text" id="TanggalBerlaku" placeholder="Tanggal Habis Berlaku" class="input-costum-permohonan" input-date-picker-ionic="formPermohonan.pemohon[formPermohonan.index - 1].EXPIRED_DATE"
+      format="DD/MM/YYYY" ng-model="masaBerlaku">
+
+    <!-- Keterangan -->
+    <label for="Keterangan" class="label-password">Keterangan
+      <select id="Keterangan" ng-model="formPermohonan.pemohon[formPermohonan.index - 1].applicant_category" class="select-gender-permohonan"
+        required>
+        <option disabled selected value="">Keterangan</option>
+        <option ng-disabled="!canEditPribadi && opt == 'PRIBADI'" ng-repeat="opt in keterangan">{{opt}}</option>
+      </select>
+    </label>
+  </div>
+</script>

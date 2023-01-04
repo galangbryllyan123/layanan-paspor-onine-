@@ -1,0 +1,59 @@
+<ion-view cache-view="false" view-title="BERANDA">
+
+  <!-- Header -->
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-navicon" style="color:azure" menu-toggle="left"></button>
+    <div class="h1 title" style="color:azure">BERANDA</div>
+  </div>
+  <!-- End Header -->
+
+  <!-- CONTENT -->
+  <ion-content padding scroll="true">
+    <div class="home-align">
+      <div class="bg-header">
+        <div class="form-container">
+          <div class="row no-padding">
+            <button class="card button-menu profil animated slideInUp" ng-click="Profil()">
+              <div class="row no-padding">
+                <div class="col-25 no-padding">
+                  <img sg-src="profileImage" call-back-src="assets/img/user.png" class="img-user" />
+                </div>
+                <div class="col-75 no-padding">
+                  <div class="left button-menu-text-profil">{{DataUser.CUSTOMER_ID}}</div>
+                  <div class="left button-menu-text-subprofil">{{DataUser.CUSTOMER_FULLNAME}}</div>
+                  <div class="left button-menu-text-subprofil2">{{Tanggallahir}}</div>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div class="row nopadding">
+            <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Informasi()">
+              <i class="im im-icon-Information"></i>
+              <div class="font-button">Informasi</div>
+            </button>
+            <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Panduan()">
+              <i class="im im-icon-Open-Book"></i>
+              <div class="font-button">Panduan</div>
+            </button>
+          </div>
+          <div class="row nopadding">
+            <!--             <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Profil()">
+              <i class="im im-icon-MaleFemale"></i>
+              <div class="font-button">Akun Saya</div>
+            </button> -->
+            <button class="card col button-menu images animated slideInUp" style="align-items: center;" ng-click="HakKewajiban()">
+              <i class="im im-icon-Receipt-3"></i>
+              <div class="font-button">Hak & Kewajiban</div>
+            </button>
+            <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Antrian()">
+              <i class="im im-icon-Ticket"></i>
+              <div class="font-button">Antrian Paspor</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <!-- END CONTENT -->
+
+</ion-view>

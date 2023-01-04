@@ -1,0 +1,162 @@
+<script id="MyModal" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+      <center>
+        <h1 class="title text-center">{{MyModal.title}}</h1>
+      </center>
+      <!-- <button class="button button-clear button-primary" ng-click="currentModal.hide()">Tutup</button> -->
+    </ion-header-bar>
+    <ion-content class="no-padding" overflow-scroll="true" scroll="true">
+      <ion-scroll direction="y" bind-html-compile="MyModal.body" ng-if="!deviceIos"></ion-scroll>
+      <div class="isi-wrapper" bind-html-compile="MyModal.body" ng-if="deviceIos"></div>
+    </ion-content>
+  </ion-modal-view>
+</script>
+<script type="text/ng-template" id="ModalPermission">
+  <div class="modal-permission-wrapper">
+    <center>
+      <p>  
+        Aplikasi <b>Layanan Paspor Online</b> Membutuhkan semua permission agar dapat berjalan dengan normal
+      </p>
+    </center>
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="button-registration-first margin-bottom-10" ng-click="exitApp()">
+          <div class="text-home">Tutup Aplikasi</div>
+        </button>
+      </div>
+      <div class="col">
+        <button type="submit" class="button-registration-first margin-bottom-10" ng-click="underStand()">
+          <div class="text-home">Baik, Saya Mengerti</div>
+        </button>
+      </div>
+    </div>
+  </div>
+</script>
+<script type="text/ng-template" id="alert-ios-device">
+  <div class="card list item-text-wrap margin-top pendaftaran-card">
+    <div class="item">
+      <center>SEBELUM MELANJUTKAN MENGGUNAKAN APLIKASI, HARAP MENGAKTIFKAN PERMISSION DI BAWAH AGAR APLIKASI DAPAT BERJALAN LANCAR SEMESTINYA!</center>
+    </div>
+    <div class="item item-text-wrap text-pendaftaran row">
+      <!-- <div class="col col-10">1.</div> -->
+      <div class="col col-100">GPS.<br>Cara mengaktifkannya, buka <b>Setting</b> > <b>Privacy</b> > <b>Location Services</b> > <b>Centang Location Services</b></div>
+    </div>
+  </div>
+  <div class="row">
+    <button type="submit" class="col-100 button-registration-first margin-bottom-10" ng-click="nextPage(true)">
+      <div class="text-home">LANJUT</div>
+    </button>
+  </div>
+</script>
+<script type="text/ng-template" id="html-list-kanim">
+  <div ng-if="map.Offices.length == 0" class="card border-radius-5 margin-bottom-5 margin-top-10">
+    <!-- <div class="margin-no-kanim" ng-if="deviceIos && iosObject.officeNotSet">
+      <button class="button-modal" modal-select="" ng-model="iosObject.selectedCountry" options="listCountryRegion" load-list-message="Harap tunggu..." search-placeholder="Pencarian" cancel-search-button="Hapus" reset-button="ATUR ULANG" cancel-button="BATAL" has-search="true" search-properties="['name']" modal-title="Pilih Negara">
+        Pilih Negara
+        <div class="option">
+          <h2>{{option.name}}</h2>
+        </div>
+      </button>
+    </div> -->
+    <div class="margin-no-kanim" ng-ifs="!deviceIos">
+      Mohon Maaf Untuk Saat Ini Di Lokasi Atau Daerah Anda Kantor Imigrasi Belum Dapat Melayani (Belum Diaktifkan), Silakan Menggunakan Layanan Antrian Paspor Versi 1 Atau Menghubungi Kantor Imigrasi Terdekat
+    </div>
+  </div>
+  <div class="list animated slideInUp" ng-repeat="listkanim in map.Offices | orderBy: 'attributes.Jarak * 1'" custom-search="{{searchValue}}" value="{{listkanim.attributes.UNIT_NAME}}" sensitive="false">
+    <div class="card border-radius-5 margin-bottom-5 margin-top-10">
+      <div class="row">
+        <div class="col-30 padding-right-0">
+          <center style="padding: 5px;padding-top:0px">
+            <img src="assets/img/logo-img.png" class="avatar-photo map">
+            <h6 class="label-distance">
+              {{(listkanim.attributes.Jarak) ? listkanim.attributes.Jarak : 0}} km
+            </h6>
+
+          </center>
+        </div>
+        <div class="col-xs-9">
+          {{listkanim.attributes.UNIT_NAME}}
+          <br>
+          <h6 class="maps-address-title">Alamat</h6>
+          <h6>{{listkanim.attributes.UNIT_CLASS}}&#13;&#10;{{listkanim.attributes.OFFICE_ADDRESS}}&#13;&#10;{{listkanim.attributes.MO_TELP}}</h6>
+        </div>
+      </div>
+      <div class="row">
+        <a class="button btn-maps col" ng-click="getQuotaAvail(listkanim.attributes.ID, listkanim.attributes)">PILIH KANTOR</a>
+      </div>
+    </div>
+  </div>
+</script>
+<script id="GoPendaftaran" type="text/ng-template">
+  <!--   <div class="card list list-card-notif">
+    <div class="item item-text-wrap">
+      Sebelum Melakukan Pendaftaran Silahkan Persiapkan Identitas Diri (KTP, KK, AKTE LAHIR, AKTE NIKAH DAN IJAZAH YANG NAMA &
+      TANGGAL LAHIRNYA SESUAI) Karena Data Yang Didaftarkan Harus Benar
+    </div>
+    <div class="item item-text-wrap">
+      Permohonan Paspor Rusak, Harap Langsung Mendatangi Kantor Imigrasi Yang Dikehendaki Dengan Membawa Semua Persyaratan (KTP,
+      KK, AKTE LAHIR, AKTE NIKAH DAN IJAZAH YANG NAMA & TANGGAL LAHIRNYA SESUAI, MATERAI, PASPOR YANG RUSAK)
+    </div>
+    <div class="item item-text-wrap">
+      Permohonan Paspor Hilang, Harap Langsung Mendatangi Kantor Imigrasi Yang Dikehendaki Dengan Membawa Surat Keterangan Hilang
+      Dari Kepolisian Republik Indonesia Atau Pihak Yang Berwenang Apabila Anda Berada Di Luar Negeri
+    </div>
+  </div> -->
+  <!-- Content -->
+  <ul class="card list item-text-wrap margin-top pendaftaran-card">
+
+    <li class="item item-text-wrap text-pendaftaran row">
+      <div class="col col-10">1.</div>
+      <div class="col col-90">SEBELUM MELAKUKAN PENDAFTARAN SILAHKAN PERSIAPKAN IDENTITAS DIRI (KTP, KK, AKTE LAHIR, AKTE NIKAH DAN IJAZAH YANG NAMA
+      DAN TANGGAL LAHIRNYA SESUAI) KARENA DATA YANG DIDAFTARKAN HARUS BENAR;</div>
+    </li>
+
+    <li class="item item-text-wrap text-pendaftaran row">
+      <div class="col col-10">2.</div>
+      <div class="col col-90">APABILA 1 X 24 JAM TIDAK DAPAT E-MAIL, MOHON UNTUK MENGHUBUNGI KANTOR IMIGRASI TERDEKAT</div>
+    </li>
+
+    <li class="item item-text-wrap text-pendaftaran row">
+      <div class="col col-10">3.</div>
+      <div class="col col-90">NOMOR TELEPON YANG DIGUNAKAN UNTUK MELAKUKAN PENDAFTARAN TIDAK BOLEH SAMA;</div>
+    </li>
+
+    <li class="item item-text-wrap text-pendaftaran row">
+      <div class="col col-10">4.</div>
+      <div class="col col-90">JIKA ANDA TIDAK MENERIMA E-MAIL AKTIVASI AKUN PADA KOTAK MASUK, SILAKAN CEK FOLDER SPAM PADA E-MAIL. SATU AKUN DAPAT
+      DAFTARKAN; </div>
+    </div>
+  </li>
+
+  <li class="item item-text-wrap text-pendaftaran row">
+    <div class="col col-10">5.</div>
+    <div class="col col-90">ANGGOTA KELUARGA (IBU/BAPAK, ANAK, SUAMI/ISTRI) DALAM 1 KARTU KELUARGA, DATA PEMOHON PERTAMA HARUS SESUAI DENGAN DATA
+    PEMBUAT AKUN;</div>
+  </li>
+
+  <li class="item item-text-wrap text-pendaftaran row">
+    <div class=row>
+      <div class="col col-10">6.</div>
+      <div class="col col-90">APLIKASI INI HANYA BISA DIGUNAKAN UNTUK PENDAFTARAN BARU DAN PENGGANTIAN, APABILA PASPOR ANDA HILANG ATAU RUSAK SILAKAN
+        DATANG KE KANIM BESERTA PERSYARATAN PENGGANTIAN PASPOR, UNTUK PENGGANTIAN PASPOR KARENA HILANG DIHARUSKAN MEMBAWA
+      SURAT KEHILANGAN DARI KEPOLISIAN;</div>
+    </div>
+  </li>
+
+  <li class="item item-text-wrap text-pendaftaran row">
+    <div class=row>
+      <div class="col col-10">7.</div>
+      <div class="col col-90">APABILA MEMBATALKAN ATAU TIDAK HADIR SETELAH MELAKUKAN PENDAFTARAN, MAKA ANDA BARU DAPAT MELAKUKAN PENDAFTARAN KEMBALI
+      30 HARI KEMUDIAN TERHITUNG SETELAH TANGGAL PENDAFTARAN SEBELUMNYA.</div>
+    </div>
+  </li>
+
+</ul>
+<!-- End Content -->
+<div class="row">
+  <button type="submit" class="col-100 button-registration-first margin-bottom-10" ng-click="doDaftar()">
+    <div class="text-home">LANJUT</div>
+  </button>
+</div>
+</script>

@@ -1,0 +1,9 @@
+{
+    "comment": "Auto generated file. Manual changes will be overwritten.",
+    "immediateAssets": {
+        "anyline/module_order_code/order_code.ale": "1dc0fee7371830da966e22652e3177e9"
+    },
+    "lazyAssets": {
+        "anyline/module_order_code/tessdata/OcrB.traineddata": "954e18b4defb4a08a5423203f727b227"
+    }
+}

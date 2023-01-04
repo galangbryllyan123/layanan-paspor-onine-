@@ -1,0 +1,51 @@
+<ion-view cache-view="false" view-title="INFORMASI">
+
+  <!-- Header -->
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-ios-arrow-back" style="color:azure" ng-click="kembali()"></button>
+    <div class="h1 title" style="color:azure">INFORMASI</div>
+  </div>
+  <!-- End Header -->
+
+  <!-- CONTENT -->
+  <ion-content padding scroll="true">
+    <div class="informasi-align">
+      <div class="bg-header-informasi">
+        <div class="form-container">
+          <div class="row nopadding">
+            <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Umum()">
+              <i class="im im-icon-Newspaper"></i>
+              <div style="font-size:18px">Umum</div>
+            </button>
+            <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Persyaratan()">
+              <i class="im im-icon-Check"></i>
+              <div style="font-size:18px">Persyaratan</div>
+            </button>
+          </div>
+          <div class="row nopadding">
+            <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Prosedur()">
+              <i class="im im-icon-Open-Book"></i>
+              <div style="font-size:18px">Prosedur</div>
+            </button>
+            <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Pembatalan()">
+              <i class="im im-icon-Close"></i>
+              <div style="font-size:18px">Pembatalan</div>
+            </button>
+          </div>
+          <div class="row nopadding">
+            <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Perubahan()">
+              <i class="im im-icon-Repeat"></i>
+              <div style="font-size:18px">Perubahan & Penarikan</div>
+            </button>
+            <button class="card col button-menu animated slideInUp" style="align-items: center;" ng-click="Biaya()">
+              <i class="im im-icon-Money"></i>
+              <div style="font-size:18px">Masa Berlaku & Biaya</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <!-- END CONTENT -->
+
+</ion-view>

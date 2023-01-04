@@ -1,0 +1,111 @@
+<ion-view view-cache="false">
+
+  <!-- Header -->
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-ios-arrow-back" style="color:azure" ng-click="Kembali()"></button>
+    <div class="h1 title" style="color:azure">AKUN SAYA</div>
+  </div>
+  <!-- End Header -->
+
+  <ion-content style="padding-top:10px;">
+    <div class="bg-head">
+      <div style="padding-top:40px;text-align: center;font-size: 18px !important;color: white !important;padding-left:10px;padding-right:10px;line-height:7mm">
+        <button class="button button-icon" style="padding-top:10px;padding-bottom:0px !important" ng-click="takePicture()">
+          <img sg-src="profileImage" call-back-src="assets/img/user.png" class="view-foto-profil" />
+          <div class="bottomright">
+            <i class="icon ion-camera"></i>
+          </div>
+        </button>
+      </div>
+      <div class="form-pengaduan">
+        <div class="card list list-card-daftar">
+          <div class="margin-top-10"></div>
+          <!-- Nama Lengkap -->
+          <label for="NamaLengkap">Nama Lengkap</label>
+          <input id="NamaLengkap" placeholder="Nama Lengkap" ng-disabled="textCommand == 'UBAH'" class="input-costum-profil" type="text"
+            ng-model="DataUser.CUSTOMER_FULLNAME" />
+
+          <!-- Username -->
+          <label for="Username">Username</label>
+          <input id="Username" placeholder="Username" ng-disabled="textCommand == 'UBAH'" class="input-costum-profil" type="text" ng-model="DataUser.CUSTOMER_USERNAME"
+          />
+
+          <!-- Nomor Telepon -->
+          <label for="NomorTelepon">Nomor Telepon</label>
+          <input id="NomorTelepon" placeholder="Nomor Telepon" ng-disabled="textCommand == 'UBAH'" class="input-costum-profil" as-number-input
+            type="text" ng-model="DataUser.MOBILE_PHONE" />
+
+          <!-- Email -->
+          <label for="Email">Email</label>
+          <input id="Email" placeholder="Email" class="input-costum-profil" type="email" ng-model="DataUser.EMAIL" disabled/>
+
+          <!-- Jenis Kelamin -->
+          <label for="Gender">Jenis Kelamin
+            <select id="Gender" class="select-gender" ng-disabled="textCommand == 'UBAH'" ng-model="DataUser.GENDER" required>
+              <option disabled selected value="">Jenis Kelamin</option>
+              <option value="M">Laki - laki</option>
+              <option value="F">Perempuan</option>
+            </select>
+          </label>
+
+          <!-- Tanggal Lahir -->
+          <label for="TanggalLahir">Tanggal Lahir</label>
+          <input type="text" id="TanggalLahir" placeholder="Tanggal Lahir" ng-disabled="textCommand == 'UBAH'" class="input-costum-profil"
+            input-date-picker-ionic="DataUser.BORN_DATE" format="DD/MM/YYYY" ng-model="tanggalLahir">
+
+          <!-- Alamat -->
+          <label for="Alamat">Alamat Sesuai KTP</label>
+          <textarea id="Alamat" placeholder="Alamat Sesuai KTP" ng-disabled="textCommand == 'UBAH'" class="input-costum-profil margin-bottom-10"
+            ng-bind-html="DataUser.CUSTOMER_ADDRESS"></textarea>
+
+          <!-- Provinsi -->
+          <button class="button-modal" modal-select="" ng-model="modalSelected.Provinsi" options="dataObjProvinsi" load-list-message="Harap tunggu..."
+            search-placeholder="Pencarian" cancel-search-button="Hapus" reset-button="ATUR ULANG" cancel-button="BATAL" has-search="true"
+            search-properties="['area_name']" modal-title="PILIH PROVINSI" ng-disabled="textCommand == 'UBAH'">
+            <div class="option">
+              <h2>{{option.area_name}}</h2>
+            </div>
+            <label for="Provinsi">Provinsi</label>
+            <input id="Provinsi" readonly placeholder="Provinsi" ng-disabled="textCommand == 'UBAH'" class="input-costum-area" type="text"
+              ng-model="modalSelected.Provinsi.area_name" required />
+          </button>
+
+          <!-- Kabupaten / Kota -->
+          <button class="button-modal" modal-select="" ng-model="modalSelected.Kabupaten" options="dataObjKabupaten" load-list-message="Harap tunggu..."
+            search-placeholder="Pencarian" cancel-search-button="Hapus" reset-button="ATUR ULANG" cancel-button="BATAL" has-search="true"
+            search-properties="['city_name']" modal-title="PILIH KABUPATEN/KOTA" ng-disabled="textCommand == 'UBAH' || dataObjKabupaten
+== undefined">
+            <div class="option">
+              <h2>{{option.city_name}}</h2>
+            </div>
+            <label for="KabupatenKota">Kabupaten / Kota</label>
+            <input id="KabupatenKota" readonly placeholder="Kabupaten / Kota" ng-disabled="textCommand == 'UBAH'" class="input-costum-area"
+              type="text" ng-model="modalSelected.Kabupaten.city_name">
+          </button>
+
+          <!-- Kecamatan -->
+          <button class="button-modal" modal-select="" ng-model="modalSelected.Kecamatan" options="dataObjKecamatan" load-list-message="Harap tunggu..."
+            search-placeholder="Pencarian" cancel-search-button="Hapus" reset-button="ATUR ULANG" cancel-button="BATAL" has-search="true"
+            search-properties="['district_name']" modal-title="PILIH KECAMATAN" ng-disabled="textCommand == 'UBAH' || DataUser.Kabupaten.length
+== undefined">
+            <div class="option">
+              <h2>{{option.district_name}}</h2>
+            </div>
+            <label for="Kecamatan">Kecamatan</label>
+            <input id="Kecamatan" readonly placeholder="Kecamatan" class="input-costum-area" ng-disabled="textCommand == 'UBAH'" type="text"
+              ng-model="modalSelected.Kecamatan.district_name">
+          </button>
+
+        </div>
+        <div class="row margin-bottom-20">
+          <button class="col button-costum-edit margin-btn margin-button-left" ng-click="changePassword()">
+            <div class="text-home">UBAH PASSWORD</div>
+          </button>
+          <button type="submit" class="col button-costum-first margin-btn margin-button-right" ng-click="updateData()">
+            <div class="text-home">{{textCommand}}</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

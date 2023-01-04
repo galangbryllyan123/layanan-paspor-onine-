@@ -1,0 +1,63 @@
+<ion-view cache-view="false" view-title="LAPOR DIRI">
+
+
+  <ion-content scroll="true">
+    <div class="bg-headers">
+      <div class="lapordiri-margin">
+        LAPORKAN DIRI ANDA
+        <br> MENGGUNAKAN SCAN PASPOR / ISI SECARA MANUAL
+      </div>
+      <div class="form-lapordiri" id="starting" myattr="starting">
+        <div class="card list list-card-daftar">
+          <div class="margin-top-10"></div>
+          <!-- Nomor Paspor -->
+          <label for="NomorPaspor">Nomor Paspor</label>
+          <input id="NomorPaspor" placeholder="Nomor Paspor" class="input-costum-profil" type="text" ng-model="laporDiri.documentNumber"
+            required />
+          <!-- Nama Lengkap -->
+          <label for="NamaLengkap">Nama Lengkap</label>
+          <input id="NamaLengkap" placeholder="Nama Lengkap" class="input-costum-profil" type="text" ng-model="laporDiri.FullName"
+            required />
+          <!-- Jenis -->
+          <label for="JenisPaspor">Jenis Paspor</label>
+          <input id="JenisPaspor" placeholder="Jenis Paspor" class="input-costum-profil" type="text" ng-model="laporDiri.documentType"
+            required />
+          <!-- Kode Negara -->
+          <input type="hidden" placeholder="Kode Negara" ng-model="laporDiri.countryCode" class="input-costum">
+          <!-- Kewarganegaraan -->
+          <label for="Kewarganegaraan">Kewarganegaraan</label>
+          <input id="Kewarganegaraan" placeholder="Kewarganegaraan" class="input-costum-profil" type="text" ng-model="laporDiri.Nationality"
+            required />
+          <!-- Tanggal Lahir -->
+          <label for="TanggalLahir">Tanggal Lahir</label>
+          <input type="text" id="TanggalLahir" placeholder="Tanggal Lahir" class="input-costum-profil" input-date-picker-ionic="laporDiri.dayOfBirthObject"
+            format="DD/MM/YYYY" ng-model="tanggalLahir">
+          <!-- Jenis Kelamin -->
+          <label for="Gender">Jenis Kelamin
+            <select id="Gender" class="select-gender" ng-model="laporDiri.sex" required>
+              <option disabled selected value="">Jenis Kelamin</option>
+              <option value="M">Laki - laki</option>
+              <option value="F">Perempuan</option>
+            </select>
+          </label>
+          <!-- Masa Berlaku -->
+          <label for="MasaBerlaku">Tanggal Masa Berlaku</label>
+          <input type="text" id="MasaBerlaku" placeholder="Tanggal Masa Berlaku" class="input-costum-profil" input-date-picker-ionic="laporDiri.expirationDateObject"
+            format="DD/MM/YYYY" ng-model="masaBerlaku">
+          <!-- Posisi -->
+          <label for="Alamat">Posisi Anda Saat Ini</label>
+          <textarea id="Alamat" placeholder="Posisi Anda Saat Ini" class="input-costum-profil margin-bottom-10" ng-model="laporDiri.Keterangan"></textarea>
+        </div>
+        <div class="row margin-bottom-20">
+          <button class="col button-costum-edit margin-btn margin-button-left" ng-click="ScanMRZ()">
+            <div class="text-home">Scan Ulang</div>
+          </button>
+          <button type="submit" class="col button-costum-first margin-btn margin-button-right" ng-click="Lapor()">
+            <div class="text-home">Lapor Diri</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+</ion-view>

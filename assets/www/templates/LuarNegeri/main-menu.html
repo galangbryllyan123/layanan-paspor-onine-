@@ -1,0 +1,90 @@
+<!-- SIDE MENU -->
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+
+    <!-- TABS -->
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive" ng-controller="MainCtrl as main">
+
+      <!-- Beranda Tab -->
+      <ion-tab on-select="main.onTabSelected(this)" on-deselect="main.onTabDeselected(this)" title="BERANDA" icon-off="im im-icon-Home"
+        icon-on="im im-icon-Home" href="#/mainmenu/beranda">
+        <ion-nav-view name="mainmenu-beranda"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Lapor Diri Tab -->
+      <ion-tab on-select="main.onTabSelected(this)" on-deselect="main.onTabDeselected(this)" title="LAPOR DIRI" icon-off="im im-icon-Inbox-Into"
+        icon-on="im im-icon-Inbox-Into" href="#/mainmenu/LaporDiriDetail">
+        <ion-nav-view name="mainmenu-lapordiri"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Kritik & Saran Tab
+      <ion-tab title="Kritik & Saran" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/mainmenu/PengaduanLuar">
+        <ion-nav-view name="mainmenu-pengaduan"></ion-nav-view>
+      </ion-tab> -->
+
+      <!-- Jadwal Tab -->
+      <ion-tab title="JADWAL ANTRIAN" icon-off="im im-icon-Calendar-4" icon-on="im im-icon-Calendar-4" href="#/mainmenu/JadwalLuar">
+        <ion-nav-view name="mainmenu-jadwal"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+    <!-- END TABS -->
+
+  </ion-side-menu-content scroll="true">
+  <ion-side-menu side="left" scroll="true" style="background-color:#D11418;">
+    <div class="list">
+      <div style="height:20%;background-color:#D11418">
+        <div style="text-align: center;padding-top: 10px;">
+          <div class="button-icon" style="color:azure">
+            <img sg-src="profileImage" call-back-src="assets/img/user.png" class="view-foto" />
+          </div>
+        </div>
+        <div style="text-align: center;color: white;padding-bottom:20px; font-size: 20px">
+          {{DataUser.CUSTOMER_FULLNAME}}
+        </div>
+      </div>
+
+      <a class="item item-icon-left" menu-close ng-click="profil()">
+        <i class="icon im im-icon-MaleFemale"></i>
+        Akun Saya
+      </a>
+
+      <a class="item item-icon-left" menu-close ng-click="LaporDiri()">
+        <i class="icon im im-icon-Inbox-Into"></i>
+        Lapor Diri
+      </a>
+
+      <a class="item item-icon-left" menu-close ng-click="antrian()">
+        <i class="icon im im-icon-Ticket"></i>
+        Antrian Paspor
+      </a>
+
+      <a class="item item-icon-left" menu-close ng-click="Informasi()">
+        <i class="icon im im-icon-Information"></i>
+        Informasi
+      </a>
+
+      <a class="item item-icon-left" menu-close ng-click="panduan()">
+        <i class="icon im im-icon-Open-Book"></i>
+        Panduan Penggunaan
+      </a>
+
+      <!-- <a class="item item-icon-left" menu-close ng-click="pengaduan()">
+        <i class="icon ion-chatbox"></i>
+        Kritik & Saran
+      </a> -->
+
+      <a class="item item-icon-left" menu-close ng-click="pengaduan()">
+        <i class="icon im im-icon-Receipt-3"></i>
+        Hak dan Kewajiban
+      </a>
+
+      <a class="item item-icon-left" menu-close ng-click="Logout()">
+        <i class="icon im im-icon-Power"></i>
+        Keluar
+      </a>
+
+    </div>
+  </ion-side-menu>
+</ion-side-menus>
+<!-- END SIDE MENU -->

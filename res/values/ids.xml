@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<item type="id" name="action_bar_activity_content" />
+<item type="id" name="action_bar_spinner" />
+<item type="id" name="action_menu_divider" />
+<item type="id" name="action_menu_presenter" />
+<item type="id" name="decode" />
+<item type="id" name="decode_failed" />
+<item type="id" name="decode_succeeded" />
+<item type="id" name="home" />
+<item type="id" name="launch_product_query" />
+<item type="id" name="line1" />
+<item type="id" name="line3" />
+<item type="id" name="progress_circular" />
+<item type="id" name="progress_horizontal" />
+<item type="id" name="quit" />
+<item type="id" name="restart_preview" />
+<item type="id" name="return_scan_result" />
+<item type="id" name="split_action_bar" />
+<item type="id" name="text" />
+<item type="id" name="text2" />
+<item type="id" name="title" />
+<item type="id" name="up" />
+<item type="id" name="action_bar_title">false</item>
+<item type="id" name="action_bar_subtitle">false</item>
+<item type="id" name="action_mode_close_button">false</item>
+<item type="id" name="activity_chooser_view_content">false</item>
+<item type="id" name="expand_activities_button">false</item>
+<item type="id" name="default_activity_button">false</item>
+<item type="id" name="list_item">false</item>
+<item type="id" name="icon">false</item>
+<item type="id" name="buttonPanel">false</item>
+<item type="id" name="spacer">false</item>
+<item type="id" name="parentPanel">false</item>
+<item type="id" name="contentPanel">false</item>
+<item type="id" name="scrollIndicatorUp">false</item>
+<item type="id" name="scrollView">false</item>
+<item type="id" name="textSpacerNoTitle">false</item>
+<item type="id" name="textSpacerNoButtons">false</item>
+<item type="id" name="scrollIndicatorDown">false</item>
+<item type="id" name="customPanel">false</item>
+<item type="id" name="custom">false</item>
+<item type="id" name="topPanel">false</item>
+<item type="id" name="title_template">false</item>
+<item type="id" name="alertTitle">false</item>
+<item type="id" name="titleDividerNoCustom">false</item>
+<item type="id" name="expanded_menu">false</item>
+<item type="id" name="checkbox">false</item>
+<item type="id" name="shortcut">false</item>
+<item type="id" name="radio">false</item>
+<item type="id" name="submenuarrow">false</item>
+<item type="id" name="action_bar_root">false</item>
+<item type="id" name="action_mode_bar_stub">false</item>
+<item type="id" name="action_mode_bar">false</item>
+<item type="id" name="decor_content_parent">false</item>
+<item type="id" name="action_bar_container">false</item>
+<item type="id" name="action_bar">false</item>
+<item type="id" name="action_context_bar">false</item>
+<item type="id" name="edit_query">false</item>
+<item type="id" name="search_bar">false</item>
+<item type="id" name="search_badge">false</item>
+<item type="id" name="search_button">false</item>
+<item type="id" name="search_edit_frame">false</item>
+<item type="id" name="search_mag_icon">false</item>
+<item type="id" name="search_plate">false</item>
+<item type="id" name="search_src_text">false</item>
+<item type="id" name="search_close_btn">false</item>
+<item type="id" name="submit_area">false</item>
+<item type="id" name="search_go_btn">false</item>
+<item type="id" name="search_voice_btn">false</item>
+<item type="id" name="select_dialog_listview">false</item>
+<item type="id" name="document_scan_view">false</item>
+<item type="id" name="image_result">false</item>
+<item type="id" name="full_image">false</item>
+<item type="id" name="error_message_layout">false</item>
+<item type="id" name="error_message">false</item>
+<item type="id" name="app_picker_list_item_icon">false</item>
+<item type="id" name="app_picker_list_item_label">false</item>
+<item type="id" name="bookmark_title">false</item>
+<item type="id" name="bookmark_url">false</item>
+<item type="id" name="preview_view">false</item>
+<item type="id" name="viewfinder_view">false</item>
+<item type="id" name="result_view">false</item>
+<item type="id" name="barcode_image_view">false</item>
+<item type="id" name="format_text_view">false</item>
+<item type="id" name="type_text_view">false</item>
+<item type="id" name="time_text_view">false</item>
+<item type="id" name="meta_text_view_label">false</item>
+<item type="id" name="meta_text_view">false</item>
+<item type="id" name="contents_text_view">false</item>
+<item type="id" name="contents_supplement_text_view">false</item>
+<item type="id" name="result_button_view">false</item>
+<item type="id" name="status_view">false</item>
+<item type="id" name="flip_button">false</item>
+<item type="id" name="torch_button">false</item>
+<item type="id" name="com_facebook_fragment_container">false</item>
+<item type="id" name="com_facebook_device_dialog_title">false</item>
+<item type="id" name="com_facebook_device_auth_instructions">false</item>
+<item type="id" name="confirmation_code">false</item>
+<item type="id" name="progress_bar">false</item>
+<item type="id" name="cancel_button">false</item>
+<item type="id" name="com_facebook_login_activity_progress_bar">false</item>
+<item type="id" name="com_facebook_body_frame">false</item>
+<item type="id" name="com_facebook_tooltip_bubble_view_top_pointer">false</item>
+<item type="id" name="com_facebook_button_xout">false</item>
+<item type="id" name="com_facebook_tooltip_bubble_view_text_body">false</item>
+<item type="id" name="com_facebook_tooltip_bubble_view_bottom_pointer">false</item>
+<item type="id" name="image_view">false</item>
+<item type="id" name="help_contents">false</item>
+<item type="id" name="history_title">false</item>
+<item type="id" name="history_detail">false</item>
+<item type="id" name="messenger_send_button">false</item>
+<item type="id" name="action_container">false</item>
+<item type="id" name="action_image">false</item>
+<item type="id" name="action_text">false</item>
+<item type="id" name="action0">false</item>
+<item type="id" name="cancel_action">false</item>
+<item type="id" name="status_bar_latest_event_content">false</item>
+<item type="id" name="media_actions">false</item>
+<item type="id" name="action_divider">false</item>
+<item type="id" name="notification_main_column_container">false</item>
+<item type="id" name="notification_main_column">false</item>
+<item type="id" name="right_side">false</item>
+<item type="id" name="time">false</item>
+<item type="id" name="chronometer">false</item>
+<item type="id" name="info">false</item>
+<item type="id" name="notification_background">false</item>
+<item type="id" name="right_icon">false</item>
+<item type="id" name="actions">false</item>
+<item type="id" name="icon_group">false</item>
+<item type="id" name="end_padder">false</item>
+<item type="id" name="os_bgimage_notif_bgimage_align_layout">false</item>
+<item type="id" name="os_bgimage_notif_bgimage">false</item>
+<item type="id" name="os_bgimage_notif_bgimage_right_aligned">false</item>
+<item type="id" name="os_bgimage_notif_title">false</item>
+<item type="id" name="os_bgimage_notif_body">false</item>
+<item type="id" name="query_text_view">false</item>
+<item type="id" name="query_button">false</item>
+<item type="id" name="result_list_view">false</item>
+<item type="id" name="page_number_view">false</item>
+<item type="id" name="snippet_view">false</item>
+<item type="id" name="share_app_button">false</item>
+<item type="id" name="share_bookmark_button">false</item>
+<item type="id" name="share_contact_button">false</item>
+<item type="id" name="share_clipboard_button">false</item>
+<item type="id" name="share_text_view">false</item>
+<item type="id" name="message">false</item>
+<item type="id" name="menu_share">false</item>
+<item type="id" name="menu_history">false</item>
+<item type="id" name="menu_settings">false</item>
+<item type="id" name="menu_help">false</item>
+<item type="id" name="menu_encode">false</item>
+<item type="id" name="menu_history_send">false</item>
+<item type="id" name="menu_history_clear_text">false</item>
+</resources>

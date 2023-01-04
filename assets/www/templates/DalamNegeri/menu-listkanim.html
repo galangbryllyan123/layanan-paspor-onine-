@@ -1,0 +1,39 @@
+<ion-view view-title="DAFTAR KANIM" cache-view="false">
+
+  <!-- Header -->
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-navicon" style="color:azure" menu-toggle="left"></button>
+    <div class="h1 title" style="color:azure">DAFTAR KANIM</div>
+  </div>
+  <!-- End Header -->
+
+  <ion-content scroll="true">
+    <div scroll="false" id="scroll-list-target" class="map-esri margin-top-percent-15">
+      <!-- Wizzard Form -->
+      <ul class="progress-indicator" ng-class="{ 'margin-bottom-30': condition(!locationIsEnabled) }">
+        <li class="completed">
+          <span class="bubble"></span>
+          <div style="padding-top: 0px !Important;font-size: 14px !Important">Langkah 1</div>
+        </li>
+        <li>
+          <span class="bubble"></span>
+          <div style="padding-top: 0px !Important;font-size: 14px !Important">Langkah 2</div>
+        </li>
+        <li>
+          <span class="bubble"></span>
+          <div style="padding-top: 0px !Important;font-size: 14px !Important">Langkah 3</div>
+        </li>
+      </ul>
+      <esri-map ng-if="condition(locationIsEnabled)" id="esriMap" center="map.center" class="maps" zoom="map.zoom" basemap="streets" load="mapLoaded"></esri-map>
+      <center>
+        <div class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="Pencarian" ng-model="searchValue" ng-init="searchValue = ''" class="search">
+        </div>
+      </center>
+    </div>
+    <ion-scroll ng-if="!deviceIos" bind-html-compile="htmlListKanim" direction="y" id="scroll-list" style="max-height:100%;"></ion-scroll>
+    <div ng-if="deviceIos" bind-html-compile="htmlListKanim" direction="y" id="scroll-list" style="max-height:100%;"></div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,81 @@
+#custom-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    /* background-image:url('../img/bg.jpg'); */
+    background-image: linear-gradient(to bottom, #008aeb 0%, #1cb4f0 51%, #1cb4f0 100%);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+
+}
+
+.Aligner-item {
+    max-width: 50%;
+    margin-top: 50%;
+}
+
+.Aligner-item-top {
+    align-self: flex-start;
+}
+
+.Aligner-item-bottom {
+    align-self: flex-end;
+}
+
+#custom-overlay img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    animation: animation 10s;
+    -moz-animation: animation 10s; /* Firefox */
+    -webkit-animation: animation 10s; /* Safari and Chrome */
+    -o-animation: animation 10s; /* Opera */
+}
+
+@keyframes pulse {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes animation {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes animation { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes animation { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes animation { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
